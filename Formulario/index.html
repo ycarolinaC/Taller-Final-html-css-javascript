@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+</head>
+<body onload="enviar()">   
+    <form  id ="formulario" class="contenedor" autocomplete="off">  
+        <h1>Contáctenos</h1>
+        
+            <label for="nombreC">Nombre completo</label><br>
+            <input type="text" id="nombreC" class="cuadro" name="nombreC" placeholder="Nombre completo" required><br>
+            <label for="email" > e-mail</label><br>
+            <input type="email" id="email" class="cuadro" name="email" placeholder="ejemplo@gmail.com" required><br>
+            <label for="asunto" >Asunto</label><br>
+            <input type="text" id="asunto"  class="cuadro" name="asunto" placeholder="Asunto" required><br>
+            <label for="mensaje" >Mensaje</label>
+            <textarea name="mensaje"  rows="10" id="mensaje" class="cuadro"   placeholder="Mensaje" required></textarea><br>
+            <button type="submit"  id="enviarDatos" class="botones" >Enviar</button>
+            <button type="reset" id="borrarDatos" class="botones">Reset</button>       
+    </form>
+</body>
+</html>

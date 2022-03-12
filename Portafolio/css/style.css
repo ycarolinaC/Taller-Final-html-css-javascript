@@ -1,0 +1,147 @@
+.subPaginas{
+    background-color: aliceblue;
+}
+.cabecera{
+    position: relative;
+    display: block;
+    text-align: center;
+    
+}
+.cabecera1{
+    background-color:darkslateblue;
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    color: aliceblue;
+    -webkit-text-stroke: 2px black;
+    margin:0 auto;
+    padding: 10px;
+}
+.tituloH1{
+    background-color: darkslateblue;
+}
+
+
+.titulo{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: block;
+    font-size: 120px;
+    text-align: center;  
+}
+
+.contenedor{
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    background-color:darkslateblue;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor1{
+    display: flex;
+    margin: 0 px 5px 5px 5px;
+    padding: 10px;
+    background-color:darkslateblue;
+    justify-content: space-between;
+    align-items: center;
+}
+.cuadro{
+	display: inherit;
+	width:30%;
+	background-color:#ccc;
+	margin:5px;
+    justify-content: space-between;
+}
+.imagen{
+    margin: 10px;
+}
+.imagen2{
+    justify-content: space-between;
+    align-items: center;
+}
+.pagina{
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px ;
+    color: aliceblue;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+}
+
+.cuadro1{
+    display: inherit;
+	width:50%;
+	background-color:#ccc;
+	margin:5px;
+    justify-content: space-between;
+}
+.parrafo{
+    text-align: center;
+    font-size: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 10px;
+}
+.bordesB{
+    background-color:aliceblue;
+    border: none;
+    text-align: justify;
+}
+
+.bordesB:hover{
+    color:red;
+}
+.bordesB:active{
+    color:darkslateblue;
+}
+
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.cuerpoP{
+    margin: 15px;
+    text-align: justify;
+}
+
+footer{
+    background-color: darkslateblue;
+}
+
+.footerN{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.marcas{
+    border: 2px solid gray;
+    font-family: monospace;
+    white-space: pre;
+    margin: 10px;
+    border-radius: 2px;
+    word-wrap: break-word;
+    overflow: auto;
+    padding:0px;
+
+}
+.marcas1{
+    white-space: pre-wrap;
+    color: darkgreen;
+}
+span{
+    color: blue;
+    
+}
+
+.variables{
+    color: black;
+}

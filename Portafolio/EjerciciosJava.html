@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Java </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+    
+</head>
+<body class="subPaginas">
+    <header class="cabecera1">
+        <h1 class=" tituloH1">Vamos de Pseint a Java</h1>
+    </header>
+    <div class="cuerpoP">
+        <h1>Tema de talleres en java</h1><b></b>
+        <p>Todos los ejercicios que se realizaron en Pseint se deben  realizar en Java, 
+            Dar click sobre el ejercicio para ver la solución.
+        </p>
+        <ol>
+            <li> <b>Variables e impresión</b> 
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar1')" >Realizar un programa el cual solicite su nombre y apellidos.</button>                       
+                            <li id="ocultar1" class="ocultar"> 
+                                <pre class="marcas">
+                                    <code class="marcas1">
+                                        package Taller_Variables;
+
+                                        import java.util.Scanner;
+
+                                        public class Ejercicio1 {
+                                            private String nombre;
+                                            private String apellidos;
+
+                                            public void Ejercicio1(){
+                                                solicitarNombre();
+                                                nombre = solicitarDatos();
+                                                solicitarApellidos();
+                                                apellidos = solicitarDatos();
+                                            }
+                                            private void solicitarNombre(){
+                                                System.out.println("Ingrese su nombre");
+                                            }
+                                            private void solicitarApellidos(){
+                                                System.out.println("Ingrese sus apellidos");
+                                            }
+                                            private String solicitarDatos(){
+                                                Scanner input = new Scanner(System.in);
+                                                return input.nextLine();
+                                            }    
+                                        }
+                                    </code>
+                                </pre>
+                            </li>                       
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar2')" >Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</button>
+                        <li id="ocultar2" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Variables;
+                                    import java.util.Scanner;
+
+                                    public class Ejercicio2 {
+                                        private String nombre;
+                                        private String apellidos;
+                                        private int edad; 
+                                        private double altura;
+                                        private Scanner input;
+                                        public void Ejercicio2(){
+                                            input = new Scanner(System.in);
+                                            solicitarNombre();
+                                            nombre = solicitarString();
+                                            solicitarApellidos();
+                                            apellidos=solicitarString();
+                                            solicitarEdad();
+                                            edad=solicitarInt();
+                                            solicitarAltura();
+                                            altura=solicitarDouble();
+
+                                        }
+
+                                        private void solicitarNombre(){
+                                            System.out.println("Ingrese su nombre");
+                                        }
+
+                                        private void solicitarApellidos(){
+                                            System.out.println("Ingrese sus apellidos");
+                                        }
+                                        private void solicitarEdad(){
+                                            System.out.println("Ingrese su edad");
+                                        }
+                                        private void solicitarAltura(){
+                                            System.out.println("Ingrese su altura");
+                                        }
+                                        private String solicitarString(){       
+                                            return input.nextLine();
+                                        }
+                                        private int solicitarInt(){
+                                            return input.nextInt();
+                                        }
+                                        private double solicitarDouble(){
+                                            return input.nextDouble();
+                                        }   
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar3')" >Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje 
+                        "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</button>
+                        <li id="ocultar3" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Variables;
+
+                                    import java.util.Scanner;
+
+                                    public class Ejercicio3 {
+                                        private String nombre, apellidos,nombreMadre, nombrePadre;
+
+                                        public void Ejercicio3(){
+                                            solicitarNombre();
+                                            nombre = solicitarDatos();
+                                            solicitarApellidos();
+                                            apellidos = solicitarDatos();
+                                            solicitarNombreM();
+                                            nombreMadre=solicitarDatos();
+                                            solicitarNombreP();
+                                            nombrePadre=solicitarDatos();
+                                            mensaje(nombre,apellidos,nombreMadre,nombrePadre);
+                                        }
+                                        private void solicitarNombre(){
+                                            System.out.println("Ingrese su nombre");
+                                        }
+
+                                        private void solicitarApellidos(){
+                                            System.out.println("Ingrese sus apellidos");
+                                        }
+                                        private void solicitarNombreM(){
+                                            System.out.println("Ingrese el nombre de su madre");
+                                        }
+                                        private void solicitarNombreP(){
+                                            System.out.println("Ingrese el nombre de su padre");
+                                        }
+                                        private String solicitarDatos(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextLine();
+                                        }
+
+                                        private void mensaje(String nombre, String apellidos, String nombreMadre, String nombrePadre){
+                                            System.out.println("Yo "+ nombre + apellidos+", soy hijo(a) de "+nombreMadre +" y "+nombrePadre+".");
+
+                                        }
+                                        
+                                    }
+                                 </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar4')" >Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital
+                        del país [Nombre del País]</button>
+                        <li id="ocultar4" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Variables;
+                                    import java.util.Scanner;
+
+                                    public class Ejercicio4 {
+                                        private String capital;
+                                        private String pais;
+
+                                        public void Ejercicio4(){
+                                            solicitarCapital();
+                                            capital = solicitarDatos();
+                                            solicitarPais();
+                                            pais = solicitarDatos();
+                                            mensaje(capital, pais);
+                                        }
+                                        private void solicitarCapital(){
+                                            System.out.println("Digite una ciudad capital");
+                                        }
+
+                                        private void solicitarPais(){
+                                            System.out.println("Digite el país d ela ciudad capital que ingreso");
+                                        }
+
+                                        private String solicitarDatos(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextLine();
+                                        }    
+                                        
+                                        private void mensaje(String capital, String pais){
+                                            System.out.println("La ciudad "+capital+", es la capital de "+pais+".");
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar5')" >Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente 
+                        mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</button>
+                        <li id="ocultar5" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Variables;
+
+                                    import java.util.Scanner;
+
+                                    public class Ejercicio5 {
+                                        private String nombreMascota, nombreDueno, raza;
+                                        private int edadMascota;
+                                        private Scanner input;
+                                        public void Ejercicio5(){
+                                            input = new Scanner(System.in);
+                                            solicitarNombreDueno();
+                                            nombreDueno = solicitarDatos();
+                                            solicitarNombreMascota();
+                                            nombreMascota = solicitarDatos();
+                                            solicitarRaza(); 
+                                            raza = solicitarDatos();
+                                            solicitarEdadMascota();
+                                            edadMascota = solicitarInt();      
+                                            mensaje(nombreMascota, edadMascota,raza,nombreDueno);
+                                        }
+                                        private void solicitarNombreMascota(){
+                                            System.out.println("Digite el nombre de su mascota");
+                                        }
+
+                                        private void solicitarEdadMascota(){
+                                            System.out.println("Digite la edad de su mascota en años");
+                                        }
+                                        
+                                        private void solicitarRaza(){
+                                            System.out.println("Digite la raza de su mascota");
+                                        }
+                                        private void solicitarNombreDueno(){
+                                            System.out.println("Digite el nombre completo del dueño de la mascota");
+                                        }
+
+                                        private String solicitarDatos(){   
+                                            return input.nextLine();
+                                        }    
+                                        
+                                        private int solicitarInt(){
+                                            return input.nextInt();
+                                        }
+                                        private void mensaje(String nombreMascota, int edadMascota, String raza, String nombreDueno){
+                                            System.out.println(nombreMascota+ " es un "+raza+", el cual tiene "+edadMascota+" años y " + nombreDueno+" es actualmente su dueño(a).");
+                                        }                                       
+                                    }
+                               </code>
+                            </pre>
+                        </li> 
+                    </li>                  
+                </ol>
+            </li>
+            <li> <b>Condicionales</b> 
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar6')" >Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</button>
+                        <li id="ocultar6" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.util.Scanner;
+                                    public class EjercicioC1 {
+                                        private int edad;
+                                        public void EjercicioC1(){
+                                            solicitarEdad();
+                                            edad = solicitarDatos();
+                                            revisarEdad(edad);
+                                        }
+                                        
+                                        private void solicitarEdad(){
+                                            System.out.println("Ingrese su edad");
+                                        }
+
+                                        private int solicitarDatos(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextInt();
+                                            
+                                        }
+
+                                        private void revisarEdad(int edad){
+                                            if(edad>=18){
+                                                System.out.println("Usted es mayor de edad");
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>  
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar7')" >Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</button>
+                        <li id="ocultar7" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC2 {
+                                        private int edad;
+                                        public void EjercicioC2(){
+                                            solicitarEdad();
+                                            edad = solicitarDatos();
+                                            revisarEdad(edad);
+                                        }
+                                        
+                                        private void solicitarEdad(){
+                                            System.out.println("Ingrese su edad");
+                                        }
+
+                                        private int solicitarDatos(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextInt();
+                                            
+                                        }
+
+                                        private void revisarEdad(int edad){
+                                            if(edad<18){
+                                                System.out.println("Usted es aún un niño(a)");
+                                            }
+                                        }  
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar8')" >Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla 
+                        [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje:
+                         [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</button>
+                        <li id="ocultar8" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC3 {
+                                        private String nombre, apellidos;
+                                        private int edad;
+                                        private Scanner input;
+
+                                        public void EjercicioC3(){
+                                            input = new Scanner(System.in);
+                                            solicitarNombre();
+                                            nombre = solicitarString();
+                                            solicitarApellidos();
+                                            apellidos = solicitarString();
+                                            solicitarEdad();
+                                            edad=solicitarInt();
+                                            revisarEdad(nombre, apellidos, edad);
+                                        }
+
+                                        private void solicitarNombre(){
+                                            System.out.println("Digite su nombre");
+                                        }
+                                        private void solicitarApellidos(){
+                                            System.out.println("Digite sus apellidos");
+                                        }
+                                        private void solicitarEdad(){
+                                            System.out.println("Ingrese su edad");
+                                        }
+                                        private String solicitarString(){
+                                            return input.nextLine();
+                                        }
+                                        private int solicitarInt(){
+                                            return input.nextInt();
+                                        }
+
+                                        private void revisarEdad(String nombre, String apellidos,int edad){
+                                            if (edad>=18){
+                                                System.out.println(nombre+" " +apellidos+" usted es mayor de edad, por lo tanto puede entrar a la fiesta.");
+                                            }else{
+                                                System.out.println(nombre+" " +apellidos+" sted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.");
+                                            }
+                                        }
+                                    }
+                                
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar9')" >La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las 
+                        películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda 
+                        con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</button>
+                        <li id="ocultar9" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.io.IOException;
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC4 {
+                                        private boolean bandera, banderaC,banderaA=true;
+                                        private int opcion, opcionC;
+                                        private ArrayList<String> dato = new ArrayList&lt;>();;
+                                        private Scanner input;
+                                        private ArrayList<String> peliculasAlquiladas = new ArrayList&lt;>();
+                                        private ArrayList<String> nombrePersonas = new ArrayList&lt;>();
+                                        private ArrayList<String> pelis = new ArrayList&lt;>();
+                                        
+                                        public void EjercicioC4() throws IOException{
+                                            input = new Scanner(System.in);
+                                            pelis.add("Star wars"); dato.add("0");
+                                            pelis.add("Encanto"); dato.add("0");
+                                            pelis.add("Harry potter"); dato.add("0");
+                                            pelis.add("Zoo");dato.add("0");
+                                            pelis.add("Alerta roja");dato.add("0");
+                                            pelis.add("Rapido y furioso");dato.add("0");
+                                            do{
+                                                menu();
+                                                opcion=solicitarOpcion();
+                                                bandera=evaluarOpcion(opcion);
+                                            }while(bandera==true);
+
+                                        }
+
+                                        public void peliculas(){
+                                            
+                                            for (int i = 0; i &lt; pelis.size();i++) 
+                                            { 		      
+                                                System.out.println(pelis.get(i)); 		
+                                            }
+                                            //System.out.println(pelis);          
+                                        }
+                                        public void menu(){
+                                            System.out.println("Tienda de video El Porvenir");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Consultar películas");
+                                            System.out.println("2.Alquilar películas");
+                                            System.out.println("3.Recibir películas");
+                                            System.out.println("4.Salir");
+                                        }
+
+                                        public int solicitarOpcion(){      
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        public String solicitarString(){      
+                                            return input.nextLine();
+                                        }
+
+                                        private boolean evaluarConsulta(int opcionC) throws IOException{
+                                            switch(opcionC){
+                                                case 1:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción incorrecta");
+                                                    System.in.read();
+                                            }
+                                            return true;
+
+                                        }
+                                        
+                                        private void peliculasC(){
+                                            System.out.println("Películas disponibles");
+                                            peliculas();
+                                            System.out.println("1.Regresar al menú principal"); 
+                                            opcionC = solicitarOpcion(); 
+
+                                        }
+
+                                        private void alquilarPeliculas(){
+
+                                            do{
+                                                System.out.println("Alquilar películas");
+                                                peliculas();
+                                                String nombrePelicula, nombreCliente;
+                                                System.out.println("Ingrese el nombre de la película que desea alquilar");
+                                                nombrePelicula = solicitarString();
+                                            System.out.println("Confirmar: Alquilar "+ nombrePelicula + " Si o No");
+                                            String respuesta = solicitarString();
+                                            if (respuesta.equals("Si")){
+                                                System.out.println("Ingrese el nombre de la persona que va a alquilar la película");
+                                                nombreCliente = solicitarString();
+                                                System.out.println(nombrePelicula+ " alquilada a "+nombreCliente);
+                                                peliculasAlquiladas.add(nombrePelicula);
+                                                nombrePersonas.add(nombreCliente);
+                                                banderaA=false;
+                                            }else{
+                                                System.out.println("Regresar al menú principal");
+                                                banderaA=false;
+                                            }
+
+                                            }while(banderaA==true);    
+
+                                        }
+
+                                        private void recibirPelicula(){
+                                            if(peliculasAlquiladas.size()==0){
+                                                System.out.println("No se han alquilado películas hasta el momento");
+                                            }else{
+                                                for(int i =0; i&lt;peliculasAlquiladas.size(); i++){
+                                                    System.out.println(peliculasAlquiladas.get(i));
+                                                }
+                                                System.out.println("¿Qué película va a regresar?");
+                                                String nombreP= solicitarString();
+                                                int posicion=-1;
+                                                for(int i =0; i&lt;peliculasAlquiladas.size(); i++){
+                                                    if(nombreP.equals(peliculasAlquiladas.get(i))){
+                                                        posicion=i;
+                                                    }
+                                                }    
+                                                if (posicion==-1){
+                                                    System.out.println("El nombre de la película no coincide");
+                                                }    
+                                                else{
+                                                    System.out.println("Recibir película "+ peliculasAlquiladas.get(posicion)+" entregada por "+ nombrePersonas.get(posicion));  
+                                                    System.out.println("Desea registrar observaciones Si o No");
+                                                    String r1 = solicitarString();
+                                                    if (r1.equals("Si")){
+                                                        String observaciones;
+                                                        System.out.println("Ingrese las observaciones");
+                                                        observaciones=solicitarString();
+                                                    } 
+                                                    else {
+                                                        System.out.println("No hay observaciones");
+                                                    }
+                                                    }
+                                            }
+                                        }
+
+                                        private boolean evaluarOpcion(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    do{
+                                                        peliculasC();
+                                                        banderaC = evaluarConsulta(opcionC);
+                                                    }while(banderaC==true);
+                                                    return true;
+                                                case 2:
+                                                    alquilarPeliculas();
+                                                    return true;
+                                                case 3:
+                                                    recibirPelicula();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default: 
+                                                    System.out.println("Opción correcta");
+                                                    System.in.read();            
+                                            }
+                                            return true;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar10')" >La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos 
+                        tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta
+                         de precios por producto y devoluciones en caso de que se presenten.</button>
+                        <li id="ocultar10" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+
+                                    import java.io.IOException;
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC5 {
+
+                                        private boolean bandera, banderaC, banderaEC, banderaR=true;
+                                        private int opcion, opcionC,opcionEC,opcionR;
+                                        private Scanner input;
+                                        private String medicina;
+                                        private ArrayList<String> medicamentos = new ArrayList&lt;>();
+                                        private ArrayList<Float> precios = new ArrayList&lt;>();
+                                        private float factura=0;
+                                        private int posicionC;
+                                        public void EjercicioC5() throws IOException{
+                                            input = new Scanner(System.in);
+                                            inventario();
+                                            do{
+                                                menu();
+                                                bandera=evaluarOpcion(opcion);
+                                            }while(bandera==true);
+                                        }
+
+                                        private void inventario(){
+                                            medicamentos.add("Ibuprofeno"); precios.add((float) 1800);
+                                            medicamentos.add("Advil"); precios.add((float) 1500);
+                                            medicamentos.add("Acetaminofen");precios.add((float) 2500);
+                                            medicamentos.add("Noraver");precios.add((float) 2500);
+                                            medicamentos.add("X-Raydol");precios.add((float) 1500);
+                                            medicamentos.add("Paz noche");precios.add((float) 2000);
+                                            medicamentos.add("Complejo B");precios.add((float) 7000);
+                                        }
+                                        public void menu(){
+                                            System.out.println("Droguería mi Salud");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Consultar medicamentos");
+                                            System.out.println("2.Comprar medicamentos");
+                                            System.out.println("3.Devolver medicamento");
+                                            System.out.println("4.Salir");
+                                            opcion=solicitarInt();
+                                        }
+                                        
+                                        private void consultarMedicamentos(){
+                                            System.out.println("Medicamentos          Precios ");
+                                            for(int i=0; i&lt;medicamentos.size(); i++){
+                                                System.out.println(medicamentos.get(i)+".........$"+precios.get(i));
+                                            }
+                                            System.out.println("Digita 1: Para regresar al menú principal");
+                                            opcionC=solicitarInt();
+                                            
+                                        }
+                                        
+                                        public String solicitarString(){
+                                            return input.nextLine();
+                                        }
+                                        public int solicitarInt(){
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+
+                                        private boolean evaluarConsulta(int opcionC) throws IOException{
+                                            switch(opcionC){
+                                                case 1:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Valor digitado no es válido");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }
+
+                                        private void menuComprar(){
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Comprar");
+                                            System.out.println("2.Salir");
+                                            opcionEC= solicitarInt();
+                                        }
+
+                                        private boolean evaluarCompra(int opcionEC) throws IOException{
+                                            switch(opcionEC){
+                                                case 1:
+                                                    factura = buscarMedicamento();
+                                                    System.out.println("Valor parcial $" + factura);
+                                                    return true;
+                                                case 2:
+                                                    System.out.println("Valor total de la compra: $"+factura);
+                                                    return false;
+                                                default:
+                                                    System.out.println("Valor digitado no es válido");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }
+                                        private float buscarMedicamento(){
+                                            posicionC=-1;
+                                            System.out.println("Ingresar medicamento que va a comprar: ");
+                                            medicina = solicitarString();
+                                            for(int i=0; i&lt;medicamentos.size();i++){
+                                                if(medicina.equals(medicamentos.get(i))){
+                                                    posicionC=i;
+                                                }
+                                                                            
+                                            }
+                                            if (posicionC != -1){
+                                                System.out.println(medicamentos.get(posicionC)+".........$"+precios.get(posicionC));
+                                                System.out.println("¿Va a llevar el medicamento Si o No?");
+                                                String respuesta=solicitarString();
+                                                if (respuesta.equals("Si")){
+                                                    factura = factura+precios.get(posicionC);
+                                                }
+
+                                            }else{System.out.println("El medicamento ingresado no coincide");
+
+                                            }                
+                                            return factura;
+                                        }
+
+                                        private void menuDevolucion(){
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Regresar medicamento");
+                                            System.out.println("2.Salir");
+                                            opcionR= solicitarInt();
+                                        }
+                                        private boolean evaluarDevolucion(int opcionR) throws IOException{
+                                            switch(opcionR){
+                                                case 1:
+                                                    posicionC=-1;
+                                                    System.out.println("Ingresar medicamento que va a regresar: ");
+                                                    medicina = solicitarString();
+                                                    for(int i=0; i&lt;medicamentos.size();i++){
+                                                        if(medicina.equals(medicamentos.get(i))){
+                                                            posicionC=i;
+                                                        }
+                                                                                    
+                                                    }
+                                                    if (posicionC != -1){
+                                                        System.out.println(medicamentos.get(posicionC)+".........$"+precios.get(posicionC));
+                                                        System.out.println("Confirmar devolución Si o No");
+                                                        String respuesta=solicitarString();
+                                                        if (respuesta.equals("Si")){
+                                                            System.out.println("Valor a regresar $"+ precios.get(posicionC));
+                                                        }
+                                            
+                                                    }else{System.out.println("El medicamento ingresado no coincide");
+                                                }
+                                                    return true;
+                                                case 2:
+                                                    return false;
+                                            }
+                                            return true;
+                                        }
+
+                                        private boolean evaluarOpcion(int opcion) throws IOException{ 
+                                            switch(opcion){
+                                                case 1:
+                                                    do{ 
+                                                    consultarMedicamentos();
+                                                    banderaC=evaluarConsulta(opcionC);                        
+                                                    }while(banderaC==true);
+
+                                                    return true;
+                                                case 2:
+                                                    do{
+                                                        menuComprar();
+                                                        banderaEC=evaluarCompra(opcionEC);
+                                                    }while(banderaEC==true);
+                                                    return true;
+                                                case 3 :
+                                                    do{
+                                                        menuDevolucion();
+                                                        banderaR=evaluarDevolucion(opcionR);
+                                                    }while(banderaR==true);
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción elegida inválida");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }  
+                                    }                                   
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar11')" >El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los 
+                        servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de 
+                        salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</button>
+                        <li id="ocultar11" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.io.IOException;
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC6 {
+                                        public Scanner input;
+                                        private boolean bandera=true;
+                                        private  int opcion,p1;
+                                        private ArrayList<String> placas= new ArrayList&lt;>();
+                                        private ArrayList<String> nombresP= new ArrayList&lt;>();
+                                        private ArrayList<String> observacionesI= new ArrayList&lt;>();
+                                        private ArrayList<String> observacionesS= new ArrayList&lt;>();
+                                        private String placa, nombre, observacionI, observacionS, arreglos;
+                                        public void EjercicioC6() throws IOException{
+                                            input = new Scanner(System.in);
+                                            do{
+                                                menu();
+                                                bandera = evaluarOpcion(opcion);
+                                            }while(bandera==true);
+                                        }
+                                        
+                                        private void menu(){
+                                            System.out.println("Taller de motos \"El Maquinista\"");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Resgistro de ingreso");
+                                            System.out.println("2.Registro del mecánico");
+                                            System.out.println("3.Registro de salida");
+                                            System.out.println("4.Salir");
+                                            opcion = solicitarInt(); 
+                                        }
+
+                                        private boolean evaluarOpcion(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    System.out.println("Ingresa la placa");
+                                                    placa = solicitarString(); placas.add(placa);
+                                                    System.out.println("Nombre del propietario");
+                                                    nombre = solicitarString(); nombresP.add(nombre);
+                                                    System.out.println("Observaciones de ingreso");
+                                                    observacionI=solicitarString(); observacionesI.add(observacionI);
+                                                    System.out.println("Registro terminado");
+                                                    observacionesS.add("R");
+                                                    return true;
+                                                case 2:
+                                                    
+                                                    if(placas.size()>0){
+                                                        p1=-1;
+                                                        System.out.println("Ingresa la placa");
+                                                        placa = solicitarString(); 
+                                                        for (int i=0; i&lt;placas.size();i++){
+                                                            if(placas.get(i).equals(placa)){
+                                                                p1 = i;      
+                                                            }else{
+                                                                p1=-1;
+                                                            }         
+                                                        }
+                                                        if(p1!=-1){
+                                                            System.out.println("Razones de revisión");
+                                                            System.out.println(observacionesI.get(p1));
+                                                            System.out.println("Revisión y arreglos");
+                                                            arreglos = solicitarString();
+                                                            observacionesS.set(p1, arreglos);
+                                                        }
+                                                    }else{
+                                                        System.out.println("No hay motos ingresadas");
+                                                    }
+                                                    return true;
+                                                case 3:
+                                                    
+                                                    if(placas.size()> 0){
+                                                        System.out.println("Ingresa la placa");
+                                                        placa = solicitarString();
+                                                        for (int i=0; i&lt;placas.size();i++){
+                                                            if(placas.get(i).equals(placa)){
+                                                                System.out.println("La moto con placa : " + placas.get(i));
+                                                                System.out.println("La entrega se hace con las siguientes observaciones: "+ observacionesS.get(i));
+                                                            }
+                                                        }
+                                                    }else{
+                                                        System.out.println("La moto no ha sido ingresada");
+                                                    }
+                                                    return true;
+                                                case 4:
+
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción inválida");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }
+
+                                        public int solicitarInt(){
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        public String solicitarString(){
+                                            return input.nextLine();
+                                        }
+                                    } 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar12')" >La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en 
+                        metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, 
+                        sobrepeso y obeso).</button>
+                        <li id="ocultar12" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.io.IOException;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC7 {
+                                        private Scanner input;
+                                        private float peso, altura, IMC;
+                                        public void EjercicioC7() throws IOException{
+                                            input= new Scanner(System.in);
+                                            solicitarAltura();
+                                            solicitarPeso();
+                                            IMC = peso/(altura*altura);
+                                            compararIMC(IMC);
+
+                                        }
+
+                                        private void solicitarPeso(){
+                                            System.out.println("Digite su peso en Kilogramos(Kg)");
+                                            peso=solicitarF();
+                                        
+                                        }
+                                        private void solicitarAltura(){
+                                            System.out.println("Digite su altura en metros(m)");
+                                            altura=solicitarF();    
+                                        }
+
+                                        public float solicitarF(){
+                                            return input.nextFloat();
+                                        }
+                                        public int solicitarI(){
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+
+                                        public void compararIMC(float IMC){
+                                            if (IMC&lt;18.5){
+                                                System.out.println("Bajo peso");
+                                            }else{
+                                                if (IMC>=18.5 && IMC&lt;25){
+                                                    System.out.println("Peso Normal");
+                                                }else{
+                                                    if (IMC>=25 && IMC&lt;30){
+                                                        System.out.println("Sobrepeso");
+                                                    }else{
+                                                        System.out.println("Obeso");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar13')" >El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza.
+                        Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles 
+                        y las ventas que se registren diariamente.</button>
+                        <li id="ocultar13" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+                                    import java.io.IOException;
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC8 {
+                                        private Scanner input;
+                                        private boolean bandera=true;
+                                        private int opcion;
+                                        private String torta,tortar;
+                                        private int cantidadTortas, precioTorta,posicion,cantidadTortas1;
+                                        private ArrayList<String> pasteles = new ArrayList&lt;>();
+                                        private ArrayList<String> pastelesVendidos = new ArrayList&lt;>();
+                                        private ArrayList<Integer> precios = new ArrayList&lt;>();
+                                        private ArrayList<Integer> preciosV = new ArrayList&lt;>();
+                                        private ArrayList<Integer> cantidades = new ArrayList&lt;>();
+                                        private ArrayList<Integer> cantidadesV = new ArrayList&lt;>();
+                                        public void EjercicioC8 () throws IOException{
+                                            input = new Scanner(System.in);
+
+                                            do{
+                                                menu();
+                                                bandera= evaluarO(opcion);
+                                            }while(bandera==true);
+
+                                        }
+                                        private void registarTortasDisponibles(){
+                                            System.out.println("Nombre de la torta");
+                                            torta=solicitarString(); pasteles.add(torta);
+                                            System.out.println("Precio de la torta");
+                                            precioTorta=solicitarInt(); precios.add((precioTorta));
+                                            System.out.println("Ingrese cantidades disponibles");
+                                            cantidadTortas=solicitarInt(); cantidades.add(cantidadTortas);
+                                        }
+
+                                        private void solicitarPedido(){
+                                            posicion=-1;
+                                            if (pasteles.size()>0){
+                                                System.out.println("¿Qué torta desea?");
+                                                tortar = solicitarString();
+                                                for(int i=0; i&lt;pasteles.size();i++){
+                                                    if (pasteles.get(i).equals(tortar)){
+                                                        posicion=i;
+                                                    }else{posicion=-1;}
+                                                }
+                                                if(posicion!=-1){
+                                                    System.out.println("¿Cuántas cantidades desea de torta de " + torta+"?");
+                                                    cantidadTortas1=solicitarInt();
+                                                    
+                                                    if (cantidades.get(posicion)>= cantidadTortas1){
+                                                        cantidades.set(posicion,cantidades.get(posicion)- cantidadTortas1);
+                                                        System.out.println("Pedido solicitado con éxito");
+                                                        pastelesVendidos.add(pasteles.get(posicion));
+                                                        preciosV.add(precios.get(posicion));
+                                                        cantidadesV.add(cantidadTortas1);
+                                                    }else{
+                                                        System.out.println("El número de tortas disponibles no es suficiente para el pedido");
+                                                    }
+                                                }else{System.out.println("Torta de " + tortar + "no disponible");
+
+                                                }
+                                            }else{
+                                                System.out.println("No hay tortas registradas");
+                                            }
+                                            
+                                        }
+
+                                        private void ventasDia(){
+                                            int acumulador=0;
+                                            if(pastelesVendidos.size()>0){
+                                                System.out.println("Tortas vendidas          $");
+                                                for (int i=0; i&lt;pastelesVendidos.size(); i++){
+                                                    int valor = (cantidadesV.get(i))*preciosV.get(i);
+                                                    System.out.println(pastelesVendidos.get(i)+"       $"+ valor);
+                                                    acumulador = acumulador +valor;
+                                                }
+                                            System.out.println("Total ventas del días $"+ acumulador);   
+                                            }else{
+                                                System.out.println("Aún no se han resgistrado ventas");
+                                            }
+                                        }
+                                        private void menu(){
+                                            System.out.println("Tortas");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Registrar tortas disponibles");
+                                            System.out.println("2.Solicitar pedido");
+                                            System.out.println("3.Ventas del día");  
+                                            System.out.println("4.Salir");   
+                                            opcion = solicitarInt(); 
+                                        }
+                                        
+                                        public int solicitarInt(){
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        public String  solicitarString(){
+                                            return input.nextLine();
+                                        }
+
+                                        private boolean evaluarO(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    registarTortasDisponibles();
+                                                    return true;
+                                                case 2:
+                                                    solicitarPedido();
+                                                    return true;
+                                                case 3:
+                                                    ventasDia();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción no válida"); 
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }  
+                                    } 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar14')" >El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le 
+                        facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio.
+                         No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</button>
+                        <li id="ocultar14" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+
+                                    import java.io.IOException;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC9 {
+                                        private boolean bandera = true;
+                                        private int opcion;
+                                        private float ancho,alto,ancho1,area;
+                                        private Scanner input;
+                                        public void EjercicioC9() throws IOException{
+                                            input = new Scanner(System.in);
+                                            do{
+                                                menu();
+                                                bandera=evaluarFigura(opcion);
+                                            }while(bandera==true);
+
+                                        }
+                                        
+                                        private void menu(){
+                                            System.out.println("Calcular áreas");
+                                            System.out.println("1.Calcular área de un réctangulo");
+                                            System.out.println("2.Calcular área de un tríangulo");
+                                            System.out.println("3.Calcular área de un trapecio");
+                                            System.out.println("4.Salir");
+                                            opcion=solicitarInt();
+                                        }
+                                        public int solicitarInt(){
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        
+
+                                        private void areaRectangulo(){
+                                            System.out.println("Digite el ancho del rectángulo en cm");
+                                            ancho = solicitarInt();
+                                            System.out.println("Digite el alto del rectángulo en cm");
+                                            alto = solicitarInt();
+                                            area = ancho*alto;
+                                            System.out.println("El área del triángulo es "+ area + "cm^2");
+                                        }
+                                        private void areaTriangulo(){
+                                            System.out.println("Digite la base del triángulo en cm");
+                                            ancho = solicitarInt();
+                                            System.out.println("Digite el alto del triángulo en cm");
+                                            alto = solicitarInt();
+                                            area = (ancho*alto)/2;
+                                            System.out.println("El área del triángulo es "+ area + "cm^2");
+                                        }
+                                        private void areaTrapecio(){
+                                            System.out.println("Digite la base menor del trapecio en cm");
+                                            ancho = solicitarInt();
+                                            System.out.println("Digite la base mayor del trapecio en cm");
+                                            ancho1 = solicitarInt();
+                                            System.out.println("Digite la altura del trapecio en cm");
+                                            alto = solicitarInt();
+                                            area = alto*(ancho+ancho1)/2;
+                                            System.out.println("El área del trapecio es "+ area + "cm^2");
+                                        }
+
+                                        private boolean evaluarFigura(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    areaRectangulo();
+                                                    return true;
+                                                case 2:
+                                                    areaTriangulo();
+                                                    return true;
+                                                case 3:
+                                                    areaTrapecio();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción inválida");
+                                                    System.in.read();
+                                            }   
+                                            return true;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar15')" >El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta 
+                        tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos
+                        y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</button>
+                        <li id="ocultar15" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Condicionales;
+
+                                    import java.io.IOException;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioC10 {
+                                        private String usuario;
+                                        private boolean bandera=true;
+                                        private int opcion;
+                                        private float saldo, ingreso, retiro; 
+                                        private Scanner input;
+                                        public void EjercicioC10() throws IOException{
+                                            input= new Scanner(System.in);
+                                            saldo = 10000;
+                                            usuario="Carolina";
+                                            do{
+                                                menu();
+                                                bandera=evaluarOperacion(opcion);
+                                            }while(bandera==true);
+
+                                        }
+                                        private void menu(){
+                                            System.out.println("Banco Amigo");
+                                            System.out.println("Elige la operación que dese realizar");
+                                            System.out.println("1.Depositar");
+                                            System.out.println("2.Retirar");
+                                            System.out.println("3.Consultar");
+                                            System.out.println("4.Salir");
+                                            opcion=solicitarInt();
+                                        }
+                                        public int solicitarInt(){
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        public float solicitarF(){
+                                            return Float.parseFloat(input.nextLine());
+                                        }
+
+                                        private void depositar(){
+                                            System.out.println("Valor a ingresar");
+                                            ingreso =solicitarF();
+                                            saldo= saldo+ingreso;
+                                            System.out.println("Deposito exitoso");
+                                        }
+
+                                        private void retirar(){
+                                            System.out.println("Valor a retirar");
+                                            retiro =solicitarF();
+                                            if (retiro&lt;saldo){
+                                                saldo= saldo-retiro;
+                                                System.out.println("Retiro exitoso");
+                                            }else{ 
+                                                System.out.println("Fondos insuficientes");
+                                            }
+                                            
+                                        }
+                                        private void consultar(){
+                                            System.out.println("Saldo $"+ saldo);
+                                        }
+
+                                        private boolean evaluarOperacion(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    depositar();
+                                                    return true;
+                                                case 2:
+                                                    retirar();
+                                                    return true;
+                                                case 3:
+                                                    consultar();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción inválida");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                </ol>
+            </li>
+
+            <li> <b>Ciclos</b>
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar16')" >Realizar la siguiente figura por medio del <b>ciclo Para</b>.<br>
+                        <img src="images/f1.PNG" alt="Figura" width="150px" height="150px" class="imagen"> 
+                    </button>
+                        <li id="ocultar16" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    public class EjercicioCiclo1 {
+                                        private String c;
+                                        public void EjercicioCiclo1(){
+                                            c="*";
+                                            dibujar();
+                                        }
+                                        private void dibujar(){
+                                            for (int i=0; i&lt;10;i++){
+                                                System.out.println(c);
+                                                c= c + "*";
+                                            } 
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar17')" >Realizar la siguiente figura por medio del <b>ciclo Mientras - Hacer</b>.<br>
+                        <img src="images/f2.PNG" alt="Figura" width="150px" height="150px" class="imagen">  </button>
+                        <li id="ocultar17" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    public class EjercicioCiclo2 {
+                                        private String c,e,t;
+                                        private int n1, contador;
+                                        public void EjercicioCiclo2(){
+                                            c="*";
+                                            n1=9;
+                                            contador=1;
+                                            dibujar();
+                                        }
+
+                                        private void dibujar(){
+                                            while(contador&lt;11){
+                                                e="";
+                                                for (int i = 0; i&lt;n1; i++){
+                                                    e= e + " ";
+                                                }
+                                                t = e + c;
+                                                System.out.println(t);
+                                                c = "*"+ c;
+                                                contador= contador+1;
+                                                n1=n1-1;
+                                            }
+                                        }   
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar18')" >Realizar la siguiente figura por medio del <b>ciclo Repetir - Hasta Que</b>.
+                        <br>
+                        <img src="images/f3.PNG" alt="Figura" width="150px" height="150px" class="imagen">
+                    </button>
+                        <li id="ocultar18" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    public class EjercicioCiclo3 {
+                                        private String c,e,e1,t;
+                                        private int n1,n2, contador,contador1,contador2;
+                                        public void EjercicioCiclo3(){
+                                            
+                                            n1=10; n2 =8;
+                                            contador=1;
+                                            c="*";
+                                            dibujar1();
+                                            c="***";
+                                            dibujar2();
+                                            c="*****";
+                                            dibujar3();
+                                            
+                                        }
+
+                                        private void dibujar1(){
+                                            
+                                            do{
+                                                e="";
+                                                for (int i=0; i&lt;n1;i++){
+                                                    e=e+" ";
+                                                }
+                                                t = e+ c;
+                                                System.out.println(t);
+                                                c=c+"**";
+                                                contador=contador+1;
+                                                n1=n1-1;
+                                            }while(contador!=12);
+                                        
+                                        }
+                                        private void dibujar2(){
+                                            
+                                            do{
+                                                e="";
+                                                for(int i=0; i&lt;9; i++){
+                                                    e=e + " ";
+                                                }
+                                                t =e + c;
+                                                System.out.println(t);
+                                                contador1= contador1+1;
+                                            }while(contador1!=2);
+                                        }
+                                        private void dibujar3(){
+                                            
+                                            do{
+                                                e="";
+                                                for(int i=0; i&lt;n2; i++){
+                                                    e=e + " ";
+                                                }
+                                                t =e + c;
+                                                System.out.println(t);
+                                                c=c+"**";
+                                                contador2= contador2+1;
+                                                n2=n2-1;
+                                    
+                                        }while(contador2!=2);
+                                     }  
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar19')" >Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario 
+                        indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:<br>
+                        <img src="images/f4.PNG" alt="Figura" width="150px" height="150px" class="imagen"></button>
+                        <li id="ocultar19" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    import java.util.Scanner;
+
+                                    public class EjercicioCiclo4 {
+                                        private int numero, resultado;
+                                        public void EjercicioCiclo4(){
+                                            tablas();
+                                        }
+                                        
+                                        private int solicitarInt(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextInt();
+                                        }
+
+                                        private void tablas(){
+                                            System.out.println("Ingrese el número de la tabal que desea estudiar");
+                                            numero = solicitarInt();
+                                            for(int i=1; i&lt;11; i++){
+                                                resultado = i*numero;
+                                                System.out.println(i+"X" +numero+ " = " +resultado);
+                                            }
+                                        }
+                                    } 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar20')" >Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.<br>
+                        <img src="images/f5.PNG" alt="Figura" width="150px" height="80px" class="imagen"></button>
+                        <li id="ocultar20" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    import java.io.IOException;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioCiclo5 {
+                                        private boolean bandera = true;
+                                        private int opcion;
+                                        private Scanner input;
+                                        private String nombre;
+                                        public void EjercicioCiclo5() throws IOException{
+                                            input = new Scanner(System.in);
+                                            nombre="";
+                                            do{
+                                                menu();
+                                                bandera=evaluar(opcion);
+                                            }while(bandera==true);
+                                            
+                                        }
+                                        
+                                        private void menu(){
+                                            System.out.println("Menú usuario");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Capturar nombre");
+                                            System.out.println("2.Saludar persona");
+                                            System.out.println("3.Salir");
+                                            opcion= solicitarInt();
+
+                                        }
+                                        private int solicitarInt(){   
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        private String solicitarString(){   
+                                            return input.nextLine();
+                                        }
+
+                                        private boolean evaluar(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    System.out.println("Digite su nombre");
+                                                    nombre = solicitarString();
+                                                    return true;
+                                                case 2:
+                                                    System.out.println("Hola " + nombre);
+                                                    return true;
+                                                case 3:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción inválida");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar21')" >Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre 
+                        completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos 
+                        si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</button>
+                        <li id="ocultar21" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    import java.io.IOException;
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+                                    
+                                    public class EjercicioCiclo6 {
+                                        private boolean bandera = true;
+                                        private int opcion,telefono, p1,p2,p3;
+                                        private Scanner input;
+                                        private String nombre;
+                                        private ArrayList<String> nombreP = new ArrayList&lt;>();
+                                        private ArrayList<Integer> telefonos = new ArrayList&lt;>();
+                                        public void EjercicioCiclo6() throws IOException{
+                                            input = new Scanner(System.in);
+                                            do{
+                                                menu();
+                                                bandera=evaluar(opcion);
+                                            }while(bandera==true);
+                                            
+                                        }
+                                        private void menu(){
+                                            System.out.println("Menú usuario");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Agregar contactos");
+                                            System.out.println("2.Buscar contactos");
+                                            System.out.println("3.Eliminar contactos");
+                                            System.out.println("4.Salir");
+                                            opcion= solicitarInt();
+                                    
+                                        }
+                                        private int solicitarInt(){   
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        private String solicitarString(){   
+                                            return input.nextLine();
+                                        }
+                                        private void agregarContacto(){
+                                            if (nombreP.size()&lt;=3){
+                                                System.out.println("Crear contacto");
+                                                System.out.println("Nombre:");
+                                                nombre=solicitarString();
+                                                System.out.println("Teléfono:");
+                                                telefono=solicitarInt();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(telefonos.get(i).equals(telefono)){
+                                                        p1=10;
+                                                    }else{p1=-1;}
+                                                }
+                                                if(p1==-1){
+                                                    nombreP.add(nombre);      
+                                                    telefonos.add(telefono);
+                                                }else{
+                                                    System.out.println("El número teléfonico ya está guardado:");
+                                                }
+                                            }else{
+                                                System.out.println("Libreta de contactos llena.");
+                                            }
+                                            
+                                        }
+                                    
+                                        private void buscarContacto(){
+                                            
+                                            if (nombreP.size()>0){
+                                                System.out.println("El número teléfonico que desea buscar");
+                                                telefono = solicitarInt();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(telefonos.get(i).equals(telefono)){
+                                                        p2=i;
+                                                    }else{p2=-1;}
+                                                }
+                                                if(p2!=-1){
+                                                    System.out.println("El número teléfonico pertenece a "+ nombreP.get(p2));
+                                                }else{
+                                                    System.out.println("El número teléfonico no está guardado");
+                                                }
+                                    
+                                            }else{
+                                                System.out.println("No tiene números guardados");
+                                            }
+                                        }
+                                    
+                                        private void borrarContacto(){
+                                            if (nombreP.size()>0){
+                                                System.out.println("El número teléfonico que desea eliminar");
+                                                telefono = solicitarInt();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(telefonos.get(i).equals(telefono)){
+                                                        p3=i;
+                                                    }else{p3=-1;}
+                                                }
+                                                if(p3!=-1){
+                                                    nombreP.remove(p3); telefonos.remove(p3);
+                                                    System.out.println("Número eliminado");
+                                                }else{
+                                                    System.out.println("El número teléfonico no está guardado");
+                                                }
+                                    
+                                            }else{
+                                                System.out.println("No tiene números guardados");
+                                            }
+                                        }
+                                        private boolean evaluar(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    agregarContacto();              
+                                                    return true;
+                                                case 2:
+                                                    buscarContacto();
+                                                    return true;
+                                                case 3:
+                                                    borrarContacto();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                     System.out.println("Opción inválida");
+                                                     System.in.read();
+                                    
+                                            }
+                                            return true;
+                                        }
+                                    }                                    
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar22')" >El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en 
+                        estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para 
+                        cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar
+                         cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</button>
+                        <li id="ocultar22" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    import java.io.IOException;
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+
+                                    public class EjercicioCiclo7 {
+                                        private boolean bandera = true;
+                                        private int opcion,telefono;
+                                        private Scanner input;
+                                        private String nombre,placa, marca;
+                                        private ArrayList<String> nombreP = new ArrayList<>();
+                                        private ArrayList<String> placas = new ArrayList<>();
+                                        private ArrayList<String> estado = new ArrayList<>();
+                                        private ArrayList<String> marcas = new ArrayList<>();
+                                        private ArrayList<Integer> telefonos = new ArrayList<>();
+                                        public void EjercicioCiclo7() throws IOException{
+                                            input = new Scanner(System.in); 
+                                            do{
+                                                menu();
+                                                bandera=evaluar(opcion);
+                                            }while(bandera==true);
+                                        }
+
+                                        private void menu(){
+                                            System.out.println("Parqueadero \"El Guardian\"");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Ingresar al parquadero");
+                                            System.out.println("2.Consultar parquadero");
+                                            System.out.println("3.Retirar del parqueadero");
+                                            System.out.println("4.Salir");
+                                            opcion= solicitarInt();
+
+                                        }
+
+                                        
+                                        private int solicitarInt(){   
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        private String solicitarString(){   
+                                            return input.nextLine();
+                                        }
+                                        private void ingresar(){
+                                            if (nombreP.size()&lt;=5){
+                                                System.out.println("Nombre completo de la persona que ingresa el vehículo");
+                                                nombre=solicitarString(); nombreP.add(nombre);
+                                                System.out.println("Ingresar el teléfono");
+                                                telefono= solicitarInt(); telefonos.add(telefono);
+                                                System.out.println("Ingresa la placa");
+                                                placa=solicitarString(); placas.add(placa);
+                                                System.out.println("Ingresa la marca");
+                                                marca=solicitarString(); marcas.add(marca);
+                                                estado.add("Ingresado");         				
+                                            }else{
+                                                System.out.println("Parqueadero sin cupo");
+                                            }
+
+                                        }
+                                        private void consultar(){
+                                            
+                                            if (nombreP.size()>0){
+                                                int pos=-1;
+                                                System.out.println("Ingresa la placa de vehículo que desa consultar");
+                                                placa=solicitarString();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(placas.get(i).equals(placa)){
+                                                        pos=i;
+                                                    }
+                                                }
+                                                if(pos!=-1){
+                                                    System.out.println("Vehículo pertenece a: "+ nombreP.get(pos));
+                                                    System.out.println("Teléfono: "+ telefonos.get(pos));
+                                                    System.out.println("Marca: "+ marcas.get(pos));
+                                                    System.out.println("Estado: "+ estado.get(pos));
+                                                }else{
+                                                    System.out.println("No se encontró coincidencia");
+                                                }
+                                            }else{
+                                                System.out.println("No han ingresado vehículos");
+                                            }
+                                        }
+                                        private void retirar(){
+                                            if (nombreP.size()>0){
+
+                                                int pos=-1;
+                                                System.out.println("Ingresa la placa de vehículo que desa retirar");
+                                                placa=solicitarString();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(placas.get(i).equals(placa)){
+                                                        pos=i;
+                                                    }
+                                                }
+                                                if(pos!=-1){
+                                                    System.out.println("Vehículo pertenece a: "+ nombreP.get(pos));
+                                                    System.out.println("Teléfono: "+ telefonos.get(pos));
+                                                    System.out.println("Marca: "+ marcas.get(pos));
+                                                    System.out.println("Estado: "+ estado.set(pos,"Retirar"));
+                                                    nombreP.remove(pos); placas.remove(pos);
+                                                    marcas.remove(pos); estado.remove(pos);
+                                                }else{
+                                                    System.out.println("No se encontró coincidencia");
+                                                }
+                                            }else{
+                                                System.out.println("No han ingresado vehículos");
+                                            }
+                                        }
+                                        private boolean evaluar(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    ingresar();              
+                                                    return true;
+                                                case 2:
+                                                    consultar();
+                                                    return true;
+                                                case 3:
+                                                    retirar();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción inválida");
+                                                    System.in.read();
+
+                                            }
+                                            return true;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar23')" >La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para
+                        continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados 
+                        de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 
+                        usuarios en su totalidad.</button>
+                        <li id="ocultar23" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Ciclos;
+
+                                    import java.util.ArrayList;
+                                    import java.util.Scanner;
+                                    import java.io.IOException;
+
+                                    public class EjercicioCiclo8 {
+                                        private Scanner input;
+                                        private boolean bandera = true;
+                                        private int opcion,cedula,p1,p2;
+                                        private String nombre,e1, prueba;
+                                        private ArrayList<String> nombreP = new ArrayList<>();
+                                        private ArrayList<Integer> cedulas = new ArrayList<>();
+                                        private ArrayList<String> examenesM = new ArrayList<>();
+                                        private ArrayList<String> pruebas = new ArrayList<>();
+                                        public void EjercicioCiclo8() throws IOException{
+                                            input = new Scanner(System.in);
+                                            do{
+                                                menu();
+                                                bandera=evaluar(opcion);
+                                            }while(bandera==true);
+
+
+                                        }
+
+                                        private void menu(){
+                                            System.out.println("Escuela automovilísitca \"El Maestro\"");
+                                            System.out.println("Elige una opción");
+                                            System.out.println("1.Ingresar al curso");
+                                            System.out.println("2.Ingresar avances del curso");
+                                            System.out.println("3.Consultar usuarios");
+                                            System.out.println("4.Salir");
+                                            opcion= solicitarInt();
+
+                                        }
+
+                                        private int solicitarInt(){   
+                                            return Integer.parseInt(input.nextLine());
+                                        }
+                                        private String solicitarString(){   
+                                            return input.nextLine();
+                                        }
+                                        private void ingresar(){
+                                            if (nombreP.size()&lt;=8){
+                                                System.out.println("Nombre completo ");
+                                                nombre=solicitarString(); nombreP.add(nombre);
+                                                System.out.println("Ingresarla cédula");
+                                                cedula= solicitarInt(); cedulas.add(cedula);
+                                                System.out.println("Inscrito"); examenesM.add("R");pruebas.add("R");
+                                            }else{
+                                                System.out.println("No hay cupo");
+                                            }
+                                            
+
+                                        }
+                                        private void consultar(){
+                                            if (nombreP.size()>0){
+                                                p2=-1;
+                                                System.out.println("Ingresar cédula");
+                                                cedula = solicitarInt();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(cedulas.get(i).equals(cedula)){
+                                                        p2=i;
+                                                    }
+                                                }
+                                                if(p2!=-1){
+                                                    if (examenesM.get(p2).equals("Si") && pruebas.get(p2).equals("Si")){
+                                                        System.out.println("El usuario " + nombreP.get(p2)+ " ha cumplido con todos los requisitos");
+                                                    }  else{
+                                                        System.out.println("No ha completado los requisitos");
+                                                        System.out.println("Exámenes médicos: "+ examenesM.get(p2));
+                                                        System.out.println("Pruebas: "+ pruebas.get(p2));
+                                                    }          
+
+                                                }else{
+                                                    System.out.println("El usuario no está registrado");
+                                                }
+
+                                            }else{
+                                                System.out.println("No hay personas registradas");
+                                            }
+                                        }
+                                        private void avances(){
+                                            if (nombreP.size()>0){
+                                                p1=-1;
+                                                System.out.println("Ingresar cédula");
+                                                cedula = solicitarInt();
+                                                for (int i=0; i&lt; nombreP.size();i++){
+                                                    if(cedulas.get(i).equals(cedula)){
+                                                        p1=i;
+                                                    }
+                                                }
+                                                if(p1!=-1){
+                                                    System.out.println("El usuario " + nombreP.get(p1));
+                                                    System.out.println("Se realizo los exámenes médicos Si o No");
+                                                    e1=solicitarString(); examenesM.set(p1,e1);
+                                                    System.out.println("Realizó la prueba Si o No");
+                                                    prueba=solicitarString(); pruebas.set(p1,prueba);
+
+                                                }else{
+                                                    System.out.println("El usuario no está registrado");
+                                                }
+
+                                            }else{
+                                                System.out.println("No hay personas registradas");
+                                            }
+                                        }
+                                        private boolean evaluar(int opcion) throws IOException{
+                                            switch(opcion){
+                                                case 1:
+                                                    ingresar();              
+                                                    return true;
+                                                case 2:
+                                                    avances();
+                                                    return true;
+                                                case 3:
+                                                    
+                                                    consultar();
+                                                    return true;
+                                                case 4:
+                                                    return false;
+                                                default:
+                                                    System.out.println("Opción inválida");
+                                                    System.in.read();
+                                            }
+                                            return true;
+                                        }
+                                    } 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>   
+                </ol>
+
+            </li>
+            <li> <b>Arreglos</b> 
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar24')" >Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo
+                        con su valor de la siguiente manera:<br></button>
+                        <ul>
+                            <li>[0]=55</li>
+                            <li>[1]=99</li>
+                            <li>[2]=11</li>
+                            <li>[3]=56</li>
+                            <li>[4]=69</li>
+                        </ul>
+                    
+                        <li id="ocultar24" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Arreglos;
+
+                                    import java.util.Scanner;
+
+                                    public class EjercicioA1 {
+                                        int [] datos = new int[5];
+                                        public void EjercicioA1(){
+                                            solicitarNumeros();
+                                            mostrarDatos();
+
+                                        }
+                                        
+                                        public int solicitarInt(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextInt();
+                                        }
+
+                                        private void solicitarNumeros(){
+                                            for(int i=0; i&lt;datos.length; i++){
+                                                System.out.println("Ingresa un número");
+                                                datos[i]= solicitarInt();
+                                            }
+                                        }
+
+                                        private void mostrarDatos(){
+                                            for(int i=0; i&lt;datos.length; i++){
+                                                System.out.println("["+i+"] = "+ datos[i]);
+                                            }
+                                        }
+                                    }
+                                    
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar25')" >Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</button>
+                        <ul>
+                            <li>Números pares: 2, 4, 6, 8, 10</li>
+                            <li>Números impares: 1, 3, 5, 7, 9</li>
+                        </ul>                     
+                        <li id="ocultar25" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Arreglos;
+
+                                    import java.util.Random;
+
+                                    import javafx.stage.Modality;
+
+                                    public class EjercicioA2 {
+                                        private int [] datos = new int[20];
+                                        private Random numero = new Random();
+                                        private int cont=0,c1=0;
+
+                                        public void EjercicioA2(){
+                                            llenarDatos();
+                                            compararDatos();
+                                            
+                                        }
+                                        private void llenarDatos(){
+                                            for(int i=0; i&lt;datos.length; i++){  
+                                                datos[i]= numero.nextInt(99)+1;
+                                            }
+                                        }
+
+                                        private void compararDatos(){
+                                            System.out.print("Números pares: "); 
+                                            while(cont&lt;=19){
+                                                if (datos[cont] % 2== 0){
+                                                    System.out.print(datos[cont]+","); 
+                                                }
+                                                cont = cont+1;
+                                            }
+                                            System.out.println(""); 
+                                            System.out.print("Números pares: "); 
+                                            while(c1&lt;=19){
+                                                if (datos[c1] % 2> 0){
+                                                    System.out.print(datos[c1]+","); 
+                                                }
+                                                c1 = c1+1;
+                                            }
+                                            System.out.println(""); 
+                                        }       
+                                    }
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar26')" >Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</button>
+                        <li id="ocultar26" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Arreglos;
+
+                                    public class EjercicioA3 {
+                                        private int cont1=0, c1=0;
+                                        public void EjercicioA3(){
+                                            System.out.println("Números primos de 1 a 1000");
+                                            numerosPrimos();
+                                        }
+                                    
+                                        private void numerosPrimos(){
+                                            
+                                            for (int i=1; i&lt;=1000; i++){
+                                                cont1=0;
+                                                for (int j=1; j&lt;=i; j++){
+                                                    if (i%j==0){
+                                                        cont1=cont1+1;             
+                                                    }else{}
+                                                }
+                                                
+                                                if (cont1==2){
+                                                    System.out.println(i);
+                                                    c1=c1+1;
+                                                }else{}
+                                                
+                                            }
+                                            System.out.println("De 1 a 1000 se tienen "+ c1+" números primos");
+                                        }    
+                                    } 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar27')" >Dada la siguiente matriz bidimensional, el cual debe de quemar en el código
+                    </button>
+                        <ul>
+                            <li>01 02 03 04 05</li>
+                            <li>06 07 08 09 10</li>
+                            <li>11 12 13 14 15</li>
+                            <li>16 17 18 19 20</li>
+                        </ul> 
+                        Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+                        <ul>
+                            <li>01 02 03 04 05</li>
+                            <li>10 09 08 07 06</li>
+                            <li>11 12 13 14 15</li>
+                            <li>20 19 18 17 16</li>
+                        </ul>    
+                        
+                        <li id="ocultar27" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Arreglos;
+
+                                    public class EjercicioA4 {
+                                        private int  matriz [][] = new int[4][5];
+                                        private int  n1 [][] = new int[4][5];
+                                        private int numero=1, np;
+                                        public void EjercicioA4(){
+                                            llenarMatriz();
+                                            reorganizar();
+                                        }
+                                        private void llenarMatriz(){
+                                            for(int i =0; i&lt;4; i++){
+                                                for(int j=0; j&lt;5; j++){
+                                                    matriz[i][j]=numero;
+                                                    numero = numero +1;
+                                                System.out.print(matriz[i][j]+ " ");
+                                                }
+                                                System.out.println("");
+                                            }
+                                        }
+                                    
+                                        private void reorganizar(){   
+                                            for(int i=0;i&lt;4; i++){
+                                                np=4; 
+                                                for (int j = 0; j&lt;5; j++){
+                                                    if(i==0 || i==2 ){
+                                                        n1[i][j]=matriz[i][j];
+                                                        System.out.print(n1[i][j]+" ");
+                                                    }else{
+                                                        n1[i][j]=matriz[i][np];
+                                                        np=np-1;
+                                                        System.out.print(n1[i][j]+" ");
+                                                    }
+                                                }  
+                                                System.out.println("");     
+                                            }
+                                        }                                    
+                                    }                                     
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar28')" >Se debe de imprimir el siguiente cuadro
+                        El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar 
+                        previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</button>
+                        <img src="images/a5.PNG" alt="Figura" width="400px" height="150px" class="imagen"></button>
+                        <li id="ocultar28" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    package Taller_Arreglos;
+
+                                    import java.util.Scanner;
+
+                                    public class EjercicioA5 {
+                                        private String  matriz [][] = new String[10][10];
+                                        private int  matrizT [][] = new int[10][10];
+                                        private int n1,n2;
+                                        public void EjercicioA5(){
+                                            tablas();
+                                            datos();
+                                        }
+                                        private void tablas(){
+                                            System.out.println("Tablas de multiplicar");
+                                            for(int i=0; i&lt;10; i++){
+                                                for(int j=0; j&lt;10; j++){
+                                                    matriz[i][j] = String.valueOf(j+1)+"X"+ String.valueOf(i+1);
+                                                    matrizT[i][j] = (j+1)*(i+1);
+                                                    System.out.print(matriz[i][j]+ " ");
+                                                }
+                                                System.out.println("");
+                                            }
+                                        }
+
+                                        public int solicitarInt(){
+                                            Scanner input = new Scanner(System.in);
+                                            return input.nextInt();
+                                        }
+                                        private void datos(){
+                                            System.out.println("Ingrese factor 1");
+                                            n1=solicitarInt();
+                                            System.out.println("Ingrese factor 2");
+                                            n2=solicitarInt();
+                                            System.out.println(n1+"X"+n2+" = "+matrizT[n2-1][n1-1]);
+                                        }
+                                    } 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                </ol>
+
+            </li>
+        </ol>
+    </div>
+
+    <footer>
+        <a href="index.html" class="footerN">Página principal</a>
+    </footer>
+    
+</body>
+</html>

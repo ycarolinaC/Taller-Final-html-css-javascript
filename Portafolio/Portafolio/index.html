@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/index.js"></script>
+</head>
+<body onload="main()">
+    
+    <div id="contenedor" class="bloque">
+        <h1 >Hoja de vida</h1>
+        <img src="images/foto.JPG" alt="Foto" width="250" height="300" id="foto" >
+    
+        <h1 > Yessica Carolina Cantero Mosquera</h1>
+        <h2 >Ingeniera física</h2>
+        
+        <h3 >Perfil</h3> 
+        <p id="perfil" >Soy una persona adaptable al entorno en constante aprendizaje con capacidad para involucrar 
+            tecnología para mejora de procesos e innovación, proactiva, dinámica, con capacidad de análisis, 
+            con habilidad para trabajar en equipo, responsable, respetuosa y puntual.
+        </p>
+        <h3>Información personal</h3>
+            <li id="revisar">
+                Celular:3168459755
+                <br>
+                e-mail: y.carolmosquera@gmail.com
+            </li>
+        <br>
+        <div  id="subtemas" class="boton">   
+                <a id="texto" href="EstudiosRealizados.html" >Estudios realizados</a> 
+        </div>
+        <br>
+        <div  id="subtemas" class="boton">   
+            <a id="texto" href="Experiencia laboral.html" >Experiencia laboral</a> 
+        </div>
+        <br>
+        <div  id="subtemas" class="boton">   
+            <a id="texto" href="ReferenciasPersonales.html" >Referencias personales</a> 
+        </div>
+        <br>
+        <div  id="subtemas" class="boton">   
+            <a id="texto" href="ReferenciasFamiliares.html" >Referencias familiares</a> 
+        </div>   
+        <br>  
+        <div  id="boton">   
+            <a id="texto" href="pdf/Carolina.pdf" >Descargar hoja de vida</a> 
+        </div> 
+        <br>
+        <select  id="temas">
+            <option value="1">Tema 1</option>
+            <option value="2">Tema 2</option>
+            <option value="3">Tema3</option>
+        </select>
+        
+        <button type="button" onclick="cambiarColor()">Cambiar tema</button>
+        <br>
+        <br>
+        <div  id="boton">   
+            <a id="texto" href="../index.html" >Regresar portafolio web</a> 
+        </div> 
+    </div>
+
+</body>
+</html>

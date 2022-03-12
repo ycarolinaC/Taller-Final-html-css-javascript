@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios realizados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/estudios.js"></script>
+</head>
+<body onload="recibir()">
+    <div id="contenedor" class="bloque">
+
+        <h1 id="botonA" class="remarcar">Estudios realizados </h1>
+        <ul>
+            <li> <button type="button" onclick="mostrar('ocultar1')">Universidad del Cauca</button> 
+                <br>
+                <ul>
+                    <li id="ocultar1" class="ocultar">Ingeniería física</li>
+                </ul>
+            </li>
+        </ul>
+      
+        
+        <ul>
+            <li><button type="button" onclick="mostrar('ocultar2')">SENA</button>
+                <ul>
+                    <li id="ocultar2" class="ocultar">English Dot Works</li>
+                </ul>
+            </li>
+        </ul>
+        <footer id="botonA" class ="remarcar">     
+            <a id = "texto" style="margin-right: 30px;" href="index.html" >
+                <-Regresar
+            </a>
+            <a id = "texto" href="ExperienciaLaboral.html" >
+                Siguiente ->
+            </a>
+        </footer>
+
+    </div>
+        
+</body>
+</html>

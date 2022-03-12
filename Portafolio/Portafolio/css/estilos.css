@@ -1,0 +1,155 @@
+.bloque{
+    text-align:center;
+    width: 1024px;
+    background-color:cornflowerblue;
+}
+
+.bloque2{
+    text-align:center;
+    width:1024px;
+    background-color:indianred;
+}
+
+.bloque3{
+    text-align:center;
+    width:1024px;
+    background-color:mediumorchid;
+}
+
+.bloque ul{
+    text-align: left;
+}
+.bloque2 ul{
+    text-align: left;
+}
+.bloque3 ul{
+    text-align: left;
+}
+#foto{
+    box-shadow: 10px 10px;
+}
+#perfil{
+    text-align: justify;
+    padding-left: 250px; 
+    padding-right: 250px
+}
+
+#revisar{
+    list-style: none;
+}
+
+.bloque div{
+    background-color:blue;
+    border-radius: 6px;
+    border: 2px solid blue;
+    width: 600px;  
+    height: 35px;    
+    margin: 0 auto;
+}
+.bloque2 div{
+    background-color:brown;
+    border-radius: 6px;
+    border: 2px solid brown;
+    width: 600px;  
+    height: 35px;    
+    margin: 0 auto;
+}
+.bloque3 div{
+    background-color:indigo;
+    border-radius: 6px;
+    border: 2px solid indigo;
+    width: 600px;  
+    height: 35px;    
+    margin: 0 auto;
+}
+
+#texto{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#texto:hover{
+    color: brown;
+}
+#texto:active{
+    color:brown;  
+}
+
+.boton:active{
+    background-color: coral;
+}
+.boton:hover{
+    background-color: coral;
+}
+
+#espacio{
+    margin-right: 30px;
+}
+
+#parali{
+    display: inline-block;
+}
+
+.remarcar{
+    background-color:blue;
+    border-radius: 6px;
+    border: 2px solid blue;  
+    text-align: center; 
+    margin: 0 auto;
+}
+.remarcar:hover{
+    background-color: coral;
+}
+.remarcar2{
+    background-color:brown;
+    border-radius: 6px;
+    border: 2px solid brown;  
+    text-align: center; 
+    margin: 0 auto;
+}
+.remarcar2:hover{
+    background-color:indianred;
+}
+
+.remarcar3{
+    background-color:indigo;
+    border-radius: 6px;
+    border: 2px solid indigo;  
+    text-align: center; 
+    margin: 0 auto;
+}
+.remarcar3:hover{
+    background-color:aquamarine;
+}
+.bloque footer{
+    background-color:blue;
+    border-radius: 6px;
+    border: 2px solid blue;  
+    text-align: center; 
+    margin: 0 auto;
+}
+.bloque2 footer{
+    background-color:brown;
+    border-radius: 6px;
+    border: 2px solid brown;  
+    text-align: center; 
+    margin: 0 auto;
+}
+.bloque3 footer{
+    background-color:indigo;
+    border-radius: 6px;
+    border: 2px solid indigo;  
+    text-align: center; 
+    margin: 0 auto;
+}
+
+.ocultar{
+    display: none;
+}
+
+.mostrar{
+    display: block;
+}

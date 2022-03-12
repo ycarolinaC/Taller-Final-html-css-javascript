@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios pseint</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body class="subPaginas">
+    <header class="cabecera1">
+        <h1 class=" tituloH1">Práctica Pseint</h1>
+    </header>
+    <div class="cuerpoP">
+        <h1>Tema de talleres en pseint</h1><b></b>
+        <p>Todos los ejercicios deben estar escritos en <b>PSeInt</b> con el perfil <b>Estricto</b>.
+            Dar click sobre el ejercicio para ver la solución.
+        </p>
+        <ol>
+            <li> <b>Variables e impresión</b> 
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar1')" >Realizar un programa el cual solicite su nombre y apellidos.</button>
+                        
+                            <li id="ocultar1" class="ocultar"> 
+                                <pre class="marcas">
+                                    <code class="marcas1">
+                                        <span>Proceso ejercicio1</span> 
+                                            <span>Definir</span> <span class="variables">nombre</span>  <span>Como Caracter</span> ;
+                                            <span>Definir</span> <span class="variables">apellidos</span>  <span>Como Caracter</span>;
+                                            <span>Escribir</span>   "Ingrese su nombre";
+                                            <span>Leer nombre</span> ;
+                                            <span>Escribir</span>  "Ingrese sus apellidos";
+                                            <span>Leer apellidos</span> ;
+                                        <span>Proceso ejercicio1</span> 
+                                    </code>
+                                </pre>
+                            </li>
+                        
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar2')" >Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</button>
+                        <li id="ocultar2" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio2</span>
+                                        Definir nombre Como Caracter;
+                                        Definir apellidos Como Caracter;;
+                                        Definir estaura Como Real;
+                                        Definir edad Como Entero;
+                                        
+                                        Escribir "Ingrese su nombre";
+                                        Leer nombre;
+                                        Escribir "Ingrese sus apellidos";
+                                        Leer apellidos;
+                                        Escribir "¿Cuál es su edad?";
+                                        Leer edad;
+                                        Escribir "¿Cuál es su estatura en cm?";
+                                        Leer edad;
+                                    <span>Proceso ejercicio2</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar3')" >Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje 
+                        "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</button>
+                        <li id="ocultar3" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio3</span>
+                                        Definir nombre Como Caracter;
+                                        Definir apellidos Como Caracter;
+                                        Definir nombre_madre Como Caracter;
+                                        Definir nombre_padre Como Caracter;
+                                        Escribir "Ingrese su nombre";
+                                        Leer nombre;
+                                        Escribir "Ingrese sus apellidos";
+                                        Leer apellidos;
+                                        Escribir "Ingrese nombre completo de su madre";
+                                        Leer nombre_madre;
+                                        Escribir "Ingrese nombre completo de su padre";
+                                        Leer nombre_padre;
+                                        Limpiar Pantalla;
+                                        Escribir "Yo ", nombre," ",apellidos, ", soy hijo de ", nombre_madre, " y ", nombre_padre;	
+                                    <span>Proceso ejercicio3</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar4')" >Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital
+                        del país [Nombre del País]</button>
+                        <li id="ocultar4" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio4</span>
+                                    Definir nombreCapital Como Caracter;
+                                        Definir nombrePais Como Caracter;
+                                        Escribir "Digita el nombre de una capital";
+                                        Leer nombreCapital;
+                                        Escribir "Digite el nombre del país";
+                                        Leer nombrePais;
+                                        Limpiar Pantalla;
+                                        Escribir "La ciudad ", nombreCapital, " es la capital de ", nombrePais;
+                                    <span>Proceso ejercicio4</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar5')" >Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente 
+                        mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</button>
+                        <li id="ocultar5" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio5</span>
+                                        Definir nombreMascota Como Caracter;
+                                        Definir tipoMascota Como Caracter;
+                                        Definir edadMascota Como Entero;
+                                        Definir nombreDueno Como Caracter;
+                                        Escribir "Ingrese nombre de la mascota";
+                                        Leer nombreMascota;
+                                        Escribir "Ingrese edad de la mascota";
+                                        Leer edadMascota;
+                                        Escribir "Ingrese la raza de la mascota";
+                                        Leer tipoMascota;
+                                        Escribir "Ingrese el nombre del dueño de la mascota";
+                                        Leer nombreDueno;
+                                        Limpiar Pantalla;
+                                        Escribir nombreMascota, " es un tipo de mascota ", tipoMascota, ", 
+                                                    el cual, tiene ", edadMascota, " años de edad y ", nombreDueno, " es actualmente su dueño(a)"; 
+                                    <span>Proceso ejercicio5</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <p>Si quieres ver la ejecución de cada ejercicio <a href="https://youtu.be/VEtZxK33nwc">Ver video </a> </p>   
+                </ol>
+            </li>
+            <li> <b>Condicionales</b> 
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar6')" >Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</button>
+                        <li id="ocultar6" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio1</span>
+                                        Definir edad Como Entero;
+                                        Escribir "Ingrese su edad";
+                                        Leer edad;
+                                        Si edad >=18 Entonces
+                                            Escribir "Usted es mayor de edad";
+                                        FinSi
+                                    <span>Proceso ejercicio1</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>  
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar7')" >Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</button>
+                        <li id="ocultar7" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio2</span>
+                                        Definir edad Como Entero;
+                                        Escribir "Ingrese su edad";
+                                        Leer edad;
+                                        Si edad &lt;18 Entonces
+                                            Escribir "Usted aún es un niño(a)";
+                                        FinSi
+                                    <span>Proceso ejercicio2</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar8')" >Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla 
+                        [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje:
+                         [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</button>
+                        <li id="ocultar8" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio3</span>
+                                        Definir c, c1, cont1 Como Entero;
+                                        cont1&lt;-0;
+                                        Escribir "Números primos del 1 al 1000";
+                                        Para c&lt;-1 Hasta 1000 Hacer 
+                                            cont1&lt;-0;
+                                            Para c1&lt;-1 Hasta c Hacer 
+                                                Si c%c1 == 0 Entonces
+                                                    cont1&lt;- cont1+1;
+                                                FinSi
+                                            FinPara 
+                                            Si cont1 == 2 Entonces
+                                                Escribir c;
+                                            FinSi
+                                        FinPara	
+                                    <span>Proceso ejercicio3</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar9')" >La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las 
+                        películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda 
+                        con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</button>
+                        <li id="ocultar9" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio4</span>
+                                        Definir n, i,j, cont, n1, np Como Entero;
+                                        Dimension n[4,5]; Dimension n1[4,5];
+                                        cont <- 1;
+                                        Para i<-0 Hasta 3 Con Paso 1 Hacer
+                                            Escribir "";
+                                            Para j<-0 Hasta 4 Con Paso 1 Hacer
+                                                n[i,j] <- cont;
+                                                cont <- cont +1;
+                                                Escribir Sin Saltar  n[i,j], " ";
+                                            FinPara
+                                        FinPara
+                                        
+                                        Para i<-0 Hasta 3 Con Paso 1 Hacer
+                                            Escribir "";
+                                            np<-4;
+                                            Para j<-0 Hasta 4 Con Paso 1 Hacer
+                                                Si i==0 o i == 2 Entonces
+                                                    n1[i,j] <- n[i,j];
+                                                    Escribir  Sin Saltar n1[i,j], " ";
+                                                SiNo
+                                                    n1[i,j] <- n[i,np];
+                                                    np<-np-1;
+                                                    Escribir  Sin Saltar n1[i,j], " ";
+                                                FinSi
+                                            FinPara
+                                        FinPara
+                                    <span>Proceso ejercicio4</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar10')" >La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos 
+                        tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta
+                         de precios por producto y devoluciones en caso de que se presenten.</button>
+                        <li id="ocultar10" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio5</span>
+                                        Definir opcion, op2 Como Entero;
+                                        Definir producto, producto2 Como Entero;
+                                        Definir total Como Real;
+                                        Escribir "Droguería";
+                                        Escribir "1.Consultar productos";
+                                        Escribir "2.Comprar productos";
+                                        Escribir "3.Regresar un producto";
+                                        Escribir "Eliga una opción";
+                                        Leer opcion;
+                                        Segun opcion Hacer
+                                            1:
+                                                Escribir "Productos";
+                                                Escribir "1.Omeprazol   $1500";
+                                                Escribir "2.Ibuprofeno  $1200";
+                                                Escribir "3.Noraver     $2500";
+                                                Escribir "4.Advil_max   $3000";
+                                                Escribir "5.Sevedol     $2500";
+                                            2: 
+                                                Escribir "Ingrese el producto";
+                                                Leer producto;
+                                                Segun producto Hacer
+                                                    1:
+                                                        total<-1500;
+                                                    2:
+                                                        total<-1200;
+                                                    3:
+                                                        total<-2500;
+                                                    4:
+                                                        total<-3000;
+                                                    5:
+                                                        total<-2500;
+                                                FinSegun
+                                                Escribir "1.Realizar compra";
+                                                Escribir "2. Añadir más productos productos";
+                                                Leer op2;
+                                                Segun op2 Hacer
+                                                    1:
+                                                        Escribir "Compra terminada valor $", total;
+                                                    2: Escribir "Ingrese el producto";
+                                                        Leer producto;
+                                                        Segun producto Hacer
+                                                            1:
+                                                                total<-total +1500;
+                                                            2:
+                                                                total<- total+1200;
+                                                            3:
+                                                                total<-total+2500;
+                                                            4:
+                                                                total<-total+3000;
+                                                            5:
+                                                                total<-total+2500;
+                                                        FinSegun
+                                                        Escribir "Compra terminada valor $", total;
+                                                FinSegun
+                                                
+                                            3:
+                                                Escribir "Ingrese el código del producto";
+                                                Leer producto2;
+                                                Segun producto2 Hacer
+                                                    1:
+                                                        total<-1500;
+                                                    2:
+                                                        total<-1200;
+                                                    3:
+                                                        total<-2500;
+                                                    4:
+                                                        total<-3000;
+                                                    5:
+                                                        total<-2500;
+                                                FinSegun
+                                                Escribir "Regresar $", total;			
+                                            De Otro Modo:
+                                                Escribir "La opción digitada es inválida";		
+                                        FinSegun	
+                                    <span>Proceso ejercicio5</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar11')" >El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los 
+                        servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de 
+                        salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</button>
+                        <li id="ocultar11" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio6</span>
+                                        Definir opcion Como Entero;
+                                        Definir fechaIngreso, fechaSalida, ObservacionCliente, ObservacionMecanico, arreglos, repuestos Como Caracter;
+                                        Escribir "El Maquinista";
+                                        Escribir "1. Registro de ingreso";
+                                        Escribir "2. Registro de salida";
+                                        Escribir "3. Salir";
+                                        Escribir "Elija una opción";
+                                        Leer opcion;
+                                        Segun opcion Hacer
+                                            1:
+                                                Escribir "Registro de ingreso";
+                                                Escribir "Ingresa Fecha de ingreso";
+                                                Leer fechaIngreso;
+                                                Escribir "Ingresa la falla mecánica que presenta";
+                                                Leer ObservacionCliente;
+                                            2:
+                                                Escribir "Registro de salida";
+                                                Escribir "Ingresa Fecha de salida";
+                                                Leer fechaSalida;
+                                                Escribir "Ingresa la novedades";
+                                                Leer ObservacionMecanico;
+                                                Escribir "Arreglos realizados";
+                                                Leer arreglos;
+                                                Escribir "Cambios de respuestos";
+                                                Leer repuestos;
+                                                Limpiar Pantalla;
+                                                Escribir "Entrega ", fechaSalida, " se encontró ", ObservacionMecanico, " se le realizaron ", arreglos, "cambios de repuestos ", repuestos; 
+                                            3:
+                                                Escribir  "Gracias por visitarnos";
+                                            De Otro Modo:
+                                                Escribir " Escribe una opción válida";
+                                        FinSegun
+                                    <span>Proceso ejercicio6</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar12')" >La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en 
+                        metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, 
+                        sobrepeso y obeso).</button>
+                        <li id="ocultar12" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio7</span>
+                                        Definir altura, peso, imc Como Real;
+                                        Escribir "Secretaria de salud municipal";
+                                        Escribir "Índice de masa corporal IMC";
+                                        Escribir "Ingrese altura en metros (m)";
+                                        Leer altura;
+                                        Escribir " Ingrese peso corporal en Kg";
+                                        Leer peso;
+                                        imc<- peso/(altura^2);
+                                        Escribir imc;
+                                        Si imc < 18.5 Entonces
+                                            Escribir "Bajo peso";
+                                        SiNo
+                                            Si imc >= 18.5 y imc &lt;25 Entonces
+                                                Escribir "Peso Normal";
+                                            SiNo
+                                                Si imc >= 25 y imc &lt;30 Entonces
+                                                    Escribir "Sobrepeso ";
+                                                SiNo
+                                                    Escribir "Obeso ";
+                                                FinSi
+                                                
+                                            FinSi
+                                            
+                                        FinSi
+                                    <span>Proceso ejercicio7</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar13')" >El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza.
+                        Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles 
+                        y las ventas que se registren diariamente.</button>
+                        <li id="ocultar13" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio8</span>
+                                        Definir opcion, tz,tc,tp,tv,td, pz,pc,pp,pv,pd Como Entero;
+                                        tz<-25; tc<-50; tp<-50;tv<-100;td<-75;
+                                        Definir p Como Logico;
+                                        p<-Falso;
+                                        Definir total Como Real;
+                                        Escribir "Pasteleria Don Carlos";
+                                        Escribir "1.Ingresar pedido";
+                                        Escribir "2.Tortas disponibles";
+                                        Escribir "3.Ventas ";
+                                        Escribir "Elija una opción";
+                                        Leer opcion;
+                                        Segun opcion Hacer
+                                            1: 
+                                                Escribir "Solicitud de pedido";
+                                                Escribir "Torta de zanahoria $2500";
+                                                Escribir "¿Cuántas porciones de torta de zanahoria?";
+                                                Leer pz; tz<- tz-pz;
+                                                Escribir "Torta de Chocolate $4000";
+                                                Escribir "¿Cuántas porciones de torta de chocolate?";
+                                                Leer pc; tc<-tc-pc;
+                                                Escribir "Torta de piña      $3000";
+                                                Escribir "¿Cuántas porciones de torta de piña?";
+                                                Leer pp; tp<-tp-pp;
+                                                Escribir "Torta de vainilla  $2000";
+                                                Escribir "¿Cuántas porciones de torta de vainilla?";
+                                                Leer pv; tv<-tv-pv;
+                                                Escribir "Torta de Durazno   $4500";
+                                                Escribir "¿Cuántas porciones de torta de durazno?";
+                                                Leer pd; td<-pd-pd;
+                                                Escribir "Pedido solicitado";
+                                                Escribir "Torta de zanahoria ", pz, " porciones";
+                                                Escribir "Torta de Chocolate ", pc, " porciones";
+                                                Escribir "Torta de piña      ", pp, " porciones";
+                                                Escribir "Torta de vainilla", pv, " porciones";
+                                                Escribir "Torta de Durazno  ", pd, " porciones";	
+                                                
+                                                p<-Verdadero;
+                                            2:
+                                                Escribir "Tortas disponibles ";
+                                                Escribir "Torta de zanahoria ", tz, " porciones";
+                                                Escribir "Torta de Chocolate ", tc, " porciones";
+                                                Escribir "Torta de piña      ", tp, " porciones";
+                                                Escribir "Torta de vainilla ", tv, " porciones";
+                                                Escribir "Torta de Durazno  ", td, " porciones";			
+                                            3:
+                                                Escribir "Ventas del día";
+                                                Si p== Falso Entonces
+                                                    Escribir "No se hicieron pedidos";
+                                                SiNo
+                                                    Escribir "Torta de zanahoria $", pz*2500;
+                                                    Escribir "Torta de Chocolate $", pc*4000;
+                                                    Escribir "Torta de piña      $", pp*3000;
+                                                    Escribir "Torta de vainilla  $", pv*2000;
+                                                    Escribir "Torta de Durazno   $", pd*4500;
+                                                    total<- pz*2500 + pc*4000 + pp*3000 + pv*2000 + pd*4500;
+                                                    Escribir "Ventas totales     $",total;
+                                                FinSi
+                                            De Otro Modo:
+                                                Escribir "Opción no válida"; 
+                                            
+                                        FinSegun
+                                    <span>Proceso ejercicio8</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar14')" >El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le 
+                        facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio.
+                         No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</button>
+                        <li id="ocultar14" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio9</span>
+                                        Definir opcion Como Entero;
+                                        Definir ancho, alto, area, base,altura, b_mayor, b_menor Como Real;
+                                        Escribir "Calculadora de área de figuras geométricas";
+                                        Escribir "1.Calcula el área de un rectángulo";
+                                        Escribir "2.Calcula el área de un triángulo";
+                                        Escribir "3.Calcula el área de un trapecio";
+                                        Escribir "Elije una figura";
+                                        Leer opcion;
+                                        Segun opcion Hacer
+                                            1:
+                                                Escribir "Calcular área del rectángulo";
+                                                Escribir "Ingresa el ancho del rectángulo en cm";
+                                                Leer ancho;
+                                                Escribir "Ingresa el alto del rectángulo en cm";
+                                                Leer alto;
+                                                area <- ancho*alto;
+                                                Escribir "El área del rectángul es ", area, "cm^2";
+                                            2:
+                                                Escribir "Calcular área del triángulo";
+                                                Escribir "Ingresa la base del tritángulo en cm";
+                                                Leer base;
+                                                Escribir "Ingresa la altura del tritángulo en cm";
+                                                Leer altura;
+                                                area <- (base*altura)/2;
+                                                Escribir "El área del triángulo es ", area, "cm^2";
+                                            3:  Escribir "Calcular área del trapecio";
+                                                Escribir "Ingresa la base menor del trapecio en cm";
+                                                Leer b_menor;
+                                                Escribir "Ingresa la base mayor del trapecio en cm";
+                                                Leer b_mayor;
+                                                Escribir "Ingresa la altura del trapecio en cm";
+                                                Leer altura;
+                                                area <- altura*(b_menor+b_mayor)/2;
+                                                Escribir "El área del trapecio es ", area, "cm^2";	
+                                            De Otro Modo:
+                                                Escribir "Opción inválida";
+                                        FinSegun		
+                                    <span>Proceso ejercicio9</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar15')" >El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta 
+                        tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos
+                        y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</button>
+                        <li id="ocultar15" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio10</span>
+                                     Definir usuario, login Como Caracter;
+                                        Definir opcion Como Entero;
+                                        Definir saldo, ingreso, retiro Como Real;
+                                        Escribir "Su Banco fiel";
+                                        Escribir "Ingrese el usuario";
+                                        Leer usuario; login <- usuario;
+                                        Si login == usuario Entonces
+                                            Escribir "Menú";
+                                            saldo <- 1000000;
+                                            Escribir "1.Ingresos";
+                                            Escribir "2.Retiros";
+                                            Escribir "3.Consultas";
+                                            Escribir "4.Salir";
+                                            Escribir "Elije la operación que deseas realizar";
+                                            Leer opcion;
+                                            Segun opcion Hacer
+                                                1:
+                                                    Escribir "Depositar";
+                                                    Escribir "Ingresa el valor a depositar $";
+                                                    Leer ingreso;
+                                                    saldo<- saldo + ingreso;
+                                                    Escribir "Saldo $", saldo;
+                                                2:
+                                                    Escribir "Retirar";
+                                                    Escribir "Ingrese el valor a retirar $";
+                                                    Leer retiro;
+                                                    Si retiro < saldo Entonces
+                                                        Escribir "Retiro exitoso";
+                                                    SiNo
+                                                        Escribir "El montó a retirar excede el valor de la cuenta";
+                                                    FinSi
+                                                3:
+                                                    Escribir "Saldo", saldo;
+                                                4:
+                                                    Escribir "Cerrar sesón";
+                                            FinSegun
+                                        FinSi
+                                    <span>Proceso ejercicio10</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                <p>Si quieres ver la ejecución de cada ejercicio <a href="https://youtu.be/b1frykS8NqM">Ver video </a> </p>   
+                </ol>
+            </li>
+
+            <li> <b>Ciclos</b>
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar16')" >Realizar la siguiente figura por medio del <b>ciclo Para</b>.<br>
+                        <img src="images/f1.PNG" alt="Figura" width="150px" height="150px" class="imagen"> 
+                    </button>
+                        <li id="ocultar16" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio1</span>
+                                        Definir c Como Caracter;
+                                        Definir contador,control Como Entero;
+                                        contador <- 1;
+                                        c<-"*";
+                                        Para control <- 1 Hasta 10 Con Paso 1 Hacer
+                                            Escribir c;
+                                            c<- Concatenar(c,"*");
+                                            contador<- contador+1;                                           
+                                        FinPara	
+                                    <span>Proceso ejercicio1</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar17')" >Realizar la siguiente figura por medio del <b>ciclo Mientras - Hacer</b>.<br>
+                        <img src="images/f2.PNG" alt="Figura" width="150px" height="150px" class="imagen">  </button>
+                        <li id="ocultar17" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio2</span>
+                                        Definir c, e, t, e1 Como Caracter;
+                                        Definir contador,control, n Como Entero;
+                                        Definir n1 Como Entero;
+                                        contador <- 1;
+                                        c<-"*";  n1<-9;
+                                        Mientras contador < 11 Hacer
+                                            e<-"";
+                                            Para control <-1 Hasta n1 Con Paso 1 Hacer 
+                                                e<-concatenar(e," ");
+                                            FinPara
+                                            t<-concatenar(e,c);
+                                            Escribir t;
+                                            c<- Concatenar("*",c);		 		
+                                            contador<- contador+1;
+                                            n1<- n1-1;
+                                        FinMientras
+                                    <span>Proceso ejercicio2</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar18')" >Realizar la siguiente figura por medio del <b>ciclo Repetir - Hasta Que</b>.
+                        <br>
+                        <img src="images/f3.PNG" alt="Figura" width="150px" height="150px" class="imagen">
+                    </button>
+                        <li id="ocultar18" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio3</span>
+                                        Definir c, e, t, e1 Como Caracter;
+                                        Definir contador,control, contador1, contador2,n Como Entero;
+                                        Definir n1, n2 Como Entero;
+                                        contador <- 1; contador1<-1; contador2<-1;
+                                        n1<-10; n2<-8;
+                                        c<-"*";
+                                        Repetir
+                                            e<-""; 
+                                            Para control <-1 Hasta n1 Con Paso 1 Hacer 
+                                                e<-concatenar(e," ");
+                                            FinPara
+                                            t<-concatenar(e,c);
+                                            Escribir t;
+                                            c<-concatenar(c,"**");
+                                            contador<- contador+1;
+                                            n1<- n1-1;
+                                        Hasta Que contador = 12
+                                        c<-"***";
+                                        Repetir
+                                            e<-""; 
+                                            Para control <-1 Hasta 9 Con Paso 1 Hacer 
+                                                e<-concatenar(e," ");
+                                            FinPara
+                                            t<-concatenar(e,c);
+                                            Escribir t;
+                                            contador1<- contador1+1;
+                                        Hasta Que contador1 = 3
+                                        c<-"*****";
+                                        Repetir
+                                            e<-""; 
+                                            Para control <-1 Hasta n2 Con Paso 1 Hacer 
+                                                e<-concatenar(e," ");
+                                            FinPara
+                                            t<-concatenar(e,c);
+                                            Escribir t;
+                                            c<-concatenar(c,"**");
+                                            contador2<- contador2+1;
+                                            n2 <- n2-1;
+                                        Hasta Que contador2=3
+                                    <span>Proceso ejercicio3</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar19')" >Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario 
+                        indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:<br>
+                        <img src="images/f4.PNG" alt="Figura" width="150px" height="150px" class="imagen"></button>
+                        <li id="ocultar19" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio4</span>
+                                        Definir num, control, r Como Entero;
+                                        Escribir "Tablas de multiplicar";
+                                        Escribir "Ingrese el número de la tabla de multiplicar que desea estudiar";
+                                        Leer num;
+                                        Para control<-1 Hasta 10 Con Paso 1 Hacer
+                                            r<- num*control;
+                                            Escribir control, "X", num, " = " , r;
+                                        FinPara
+                                    <span>Proceso ejercicio4</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar20')" >Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.<br>
+                        <img src="images/f5.PNG" alt="Figura" width="150px" height="80px" class="imagen"></button>
+                        <li id="ocultar20" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio5</span>
+                                        Definir nombre Como Caracter;
+                                        Definir contador, opcion Como Entero;
+                                        contador<-5;
+                                        Repetir
+                                            Escribir "Menú del usuario";
+                                            Escribir  "1.Captura del nombre";
+                                            Escribir  "2.Saludar persona ";
+                                            Escribir  "3.Salir del sistema";
+                                            Escribir "Elija una opción";
+                                            Leer opcion;
+                                            Segun opcion Hacer
+                                                1:
+                                                    Escribir "Ingresa el nombre";
+                                                    Leer nombre;
+                                                2:  Si longitud(nombre)>0 Entonces
+                                                        Escribir "Hola ", nombre;
+                                                    SiNo
+                                                        Escribir "No hay nombre de persona";
+                                                    FinSi
+                                                3:
+                                                    Escribir "Salir del sistema";
+                                                    contador<-0;
+                                                De Otro Modo:
+                                                    Escribir "Opción inválida";
+                                            FinSegun
+                                        Hasta Que contador= 0
+                                    <span>Proceso ejercicio5</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar21')" >Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre 
+                        completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos 
+                        si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</button>
+                        <li id="ocultar21" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio6</span>
+                                        Definir nombreC,  organizacion, n, org, n1, telefono, t Como Caracter;
+                                        Definir contador, opcion,  ct, control1,  control , c1 Como Entero;
+                                        contador<-5; ct<-0;
+                                        Dimension n[3]; Dimension t[3]; Dimension org[3];
+                                        Repetir
+                                            Escribir "Menú del usuario";
+                                            Escribir  "1.Agregar contactos";
+                                            Escribir  "2.Buscar contactos ";
+                                            Escribir  "3.Eliminar contactos";
+                                            Escribir  "4.Salir del sistema";
+                                            Escribir "Elija una opción";
+                                            Leer opcion;
+                                            Segun opcion Hacer
+                                                1:
+                                                    Si ct &lt;3 Entonces
+                                                        Escribir "Agregar contacto";
+                                                        Escribir "Nombre completo";
+                                                        Leer nombreC;  
+                                                        n[ct] <- nombreC;
+                                                        Escribir  "Teléfono";
+                                                        Leer telefono; t[ct] <- telefono;
+                                                        Escribir  "Organización";
+                                                        Leer organizacion; org[ct]<-organizacion;
+                                                        ct<- ct+1;
+                                                    SiNo
+                                                        Escribir "Libreta de contactos llena";
+                                                    FinSi
+                                                    
+                                                2:  
+                                                    Escribir "Contactos";
+                                                    Si ct == 0 Entonces
+                                                        Escribir "No hay contactos";
+                                                    SiNo
+                                                        Para control<-0 Hasta ct-1 Con Paso 1 Hacer
+                                                            Escribir n[control], ".....", t[control];
+                                                        FinPara
+                                                    FinSi
+                                                3:
+                                                    Si ct == 0 Entonces
+                                                        Escribir "No hay contactos";
+                                                    SiNo
+                                                        Escribir "Eliminar contacto";
+                                                        Escribir "Ingresar nombre";
+                                                        Leer nombreC;
+                                                        Para c1<-0 Hasta  ct-1 Con Paso 1 Hacer
+                                                            Si nombreC == n[c1] Entonces
+                                                                n[c1] <- "";
+                                                                t[c1] <- "";
+                                                                
+                                                            FinSi
+                                                        FinPara
+                                                        Escribir "Contacto eliminado";
+                                                    FinSi
+                                                4:
+                                                    Escribir "Salir del sistema";
+                                                    contador<-0;
+                                                De Otro Modo:
+                                                    Escribir "Opción inválida";
+                                            FinSegun
+                                        Hasta Que contador= 0
+                                    <span>Proceso ejercicio6</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar22')" >El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en 
+                        estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para 
+                        cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar
+                         cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</button>
+                        <li id="ocultar22" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio7</span>
+                                        Definir nombre, placa, marca, v_placas, vn,vm, ingreso Como Caracter;
+                                        Definir  opcion, telefono, contador,contadorT, vt, c1, c2, dato Como Entero;
+                                        contadorT<-5;
+                                        Dimension v_placas[5]; Dimension vn[5]; Dimension vt[5]; Dimension vm[5]; Dimension ingreso[5];
+                                        Repetir
+                                            Escribir "Parqueradero El Guardián";
+                                            Escribir  "1.Ingresar al parqueadero";
+                                            Escribir  "2.Retirar del parqueadero ";
+                                            Escribir  "3.Consultar vehículo";
+                                            Escribir  "4.Salir del sistema";
+                                            Escribir "Elija una opción";
+                                            Leer opcion;
+                                            contador<-0;
+                                            Segun opcion Hacer
+                                                1:
+                                                    Si contador <=5 Entonces
+                                                        Escribir "Ingresar al parqueadero";
+                                                        Escribir "Nombre completo de la persona que ingresa el vehículo";
+                                                        Leer nombre; vn[contador]<-nombre;
+                                                        Escribir "Ingresar teléfono";
+                                                        Leer telefono; vt[contador] <- telefono;
+                                                        Escribir "Ingresa la placa";
+                                                        Leer placa; v_placas[contador]<- placa;
+                                                        Escribir "Ingresar marca";
+                                                        Leer marca; vm[contador]<-marca;
+                                                        ingreso[contador] <- "Ingresado";
+                                                        contador <- contador +1;
+                                                    SiNo
+                                                        Escribir "Parqueadero sin cupo";
+                                                        
+                                                    FinSi
+                                                2:
+                                                    Escribir "Retirar del parqueadero";
+                                                    Escribir "Ingresar placa del vehículo";
+                                                    Leer placa;
+                                                    Para c2<-1 Hasta contador Con Paso 1 Hacer
+                                                        Si v_placas[c2] == placa Entonces
+                                                            dato<- c2;
+                                                        SiNo
+                                                            Escribir "Las placas no coinciden";
+                                                        FinSi
+                                                    FinPara
+                                                    ingreso[c2]<-"Retirado";
+                                                    Escribir "Retirar ", placa;
+                                                3:
+                                                    Escribir "Consultar vehículo";
+                                                    Escribir "Ingresar placa del vehículo";
+                                                    Leer placa;
+                                                    Para c1<-0 Hasta contador Con Paso 1 Hacer
+                                                        Si placa == v_placas[c1] Entonces
+                                                            Escribir "Propietario ", vn[c1];
+                                                            Escribir "El vehículo ha sido ", ingreso[c1];
+                                                        SiNo
+                                                            Escribir "El automóvil no ha ingresado";
+                                                        FinSi
+                                                    FinPara
+                                                4:
+                                                    Escribir "Salir del sistema";
+                                                    contadorT<-0;
+                                                De Otro Modo:
+                                                    Escribir "Opción inválida";
+                                            FinSegun
+                                        Hasta Que contadorT= 0	
+                                    <span>Proceso ejercicio7</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar23')" >La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para
+                        continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados 
+                        de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 
+                        usuarios en su totalidad.</button>
+                        <li id="ocultar23" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio8</span>
+                                        Definir nombre, placa, marca, vn, r, a, vr, va Como Caracter;
+                                        Definir  opcion, cc, contador, contadorT, vcc, c1, c2, dato, dato1 Como Entero;
+                                        Definir pruebas, curso, asignacion, asignacion1 Como Logico;
+                                        pruebas<-Falso; curso <-Falso; asignacion<- Falso; asignacion1<- Falso;
+                                        contadorT<-5;
+                                        Dimension vn[8]; Dimension vcc[8]; Dimension vr[8]; Dimension va[8];
+                                        Repetir
+                                            Escribir "Escuela automovilística El Maestro";
+                                            Escribir  "1.Ingresar al curso";
+                                            Escribir  "2.Ingresar avances del curso";
+                                            Escribir  "3.Consultar usuarios ";
+                                            Escribir  "4.Salir del sistema";
+                                            Escribir "Elija una opción";
+                                            Leer opcion;
+                                            contador<-0;
+                                            Segun opcion Hacer
+                                                1:
+                                                    Si contador <=8 Entonces
+                                                        Escribir "Ingresar al curso";
+                                                        Escribir "Nombre completo de la persona que va a realizar el curso";
+                                                        Leer nombre; vn[contador]<- nombre;
+                                                        Escribir "Documento de identidad";
+                                                        Leer cc; vcc[contador]<-cc;
+                                                        vr[contador]<- "No"; va[contador]<-"No";
+                                                        contador <- contador +1;
+                                                    SiNo
+                                                        Escribir "Curso sin cupo";
+                                                        
+                                                    FinSi
+                                                2:
+                                                    Escribir "Ingresar avances";
+                                                    Escribir "Ingresar documento de identidad";
+                                                    Leer cc;
+                                                    Para c1<-0 Hasta contador Con Paso 1 Hacer
+                                                        Si cc == vcc[c1]  Entonces
+                                                            dato1<- c1;
+                                                            asignacion <- Verdadero;
+                                                        FinSi
+                                                    FinPara
+                                                    
+                                                    Si asignacion == Verdadero Entonces
+                                                        Escribir  " Termino curso Si o No";
+                                                        Leer r; vr[dato1]<-r;
+                                                        Escribir "Aprobó curso Si o No";
+                                                        Leer a; va[dato1]<-a;
+                                                    SiNo
+                                                        Escribir" No se encuentra matriculado";
+                                                    FinSi
+                                                3:
+                                                    Escribir "Consultar resultados";
+                                                    Escribir "Ingresar documento de identidad";
+                                                    Leer cc;
+                                                    Para c2<-0 Hasta contador Con Paso 1 Hacer
+                                                        Si cc == vcc[c2]  Entonces
+                                                            dato<- c2;
+                                                            asignacion1 <- Verdadero;
+                                                        FinSi
+                                                    FinPara
+                                                    Escribir vr[dato],va[dato];
+                                                    Si asignacion1== Verdadero Entonces
+                                                        Si vr[dato]== "Si" Y va[dato] == "Si" Entonces
+                                                            Escribir  vn[dato], " aprobó todos los requisitos del curso y se ha realizado los exámenes";
+                                                        SiNo
+                                                            Si vr[dato]== "No" Entonces
+                                                                Escribir  vn[dato]," no ha terminado el curso";
+                                                            SiNo 
+                                                                Escribir  vn[dato]," no se ha realizado los exámenes";
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                4:
+                                                    Escribir "Salir del sistema";
+                                                    contadorT<-0;
+                                                De Otro Modo:
+                                                    Escribir "Opción inválida";
+                                            FinSegun
+                                        Hasta Que contadorT= 0
+                                    <span>Proceso ejercicio8</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>   
+                <p>Si quieres ver la ejecución de cada ejercicio <a href="https://youtu.be/ZKoWH_09IBY">Ver video </a> </p>   
+                </ol>
+
+            </li>
+            <li> <b>Arreglos</b> 
+                <ol type="a">
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar24')" >Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo
+                        con su valor de la siguiente manera:<br></button>
+                        <ul>
+                            <li>[0]=55</li>
+                            <li>[1]=99</li>
+                            <li>[2]=11</li>
+                            <li>[3]=56</li>
+                            <li>[4]=69</li>
+                        </ul>
+                    
+                        <li id="ocultar24" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio1</span>
+                                        Definir a, c Como Entero;;
+                                        Dimension a[5];
+                                        a[0]<-55;
+                                        a[1]<-99;
+                                        a[2]<-11;
+                                        a[3]<-56;
+                                        a[4]<-69;
+                                        Para c<-0 Hasta 4 Con Paso 1 Hacer
+                                            Escribir "[",c,"] = ",a[c];
+                                        FinPara
+                                    <span>Proceso ejercicio1</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar25')" >Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</button>
+                        <ul>
+                            <li>Números pares: 2, 4, 6, 8, 10</li>
+                            <li>Números impares: 1, 3, 5, 7, 9</li>
+                        </ul>                     
+                        <li id="ocultar25" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio2</span>
+                                        Definir a,c,cont, c1 Como Entero;
+                                        Dimension a[20]; 
+                                        Para c<-0 Hasta 19 Con Paso 1 Hacer
+                                            a[c] <- Aleatorio(1,10);
+                                        FinPara
+                                        cont<-0; c1<-0;
+                                        Escribir "Números pares :" Sin Saltar;
+                                        Mientras cont &lt;19 Hacer
+                                            Si a[cont] MOD 2 == 0 Entonces
+                                                Escribir a[cont], "," Sin Saltar;
+                                            FinSi
+                                        cont<-cont+1;	
+                                        FinMientras
+                                        Escribir "";
+                                        Escribir "Números impares :" Sin Saltar;
+                                        Mientras c1 <19 Hacer
+                                            Si a[c1] MOD 2 > 0 Entonces
+                                                Escribir a[c1], "," Sin Saltar;
+                                            FinSi
+                                            c1<-c1+1;	
+                                        FinMientras
+                                    <span>Proceso ejercicio2</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar26')" >Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</button>
+                        <li id="ocultar26" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio3</span>
+                                        Definir c, c1, cont1 Como Entero;
+                                        cont1<-0;
+                                        Escribir "Números primos del 1 al 1000";
+                                        Para c<-1 Hasta 1000 Hacer 
+                                            cont1<-0;
+                                            Para c1<-1 Hasta c Hacer 
+                                                Si c%c1 == 0 Entonces
+                                                    cont1<- cont1+1;
+                                                FinSi
+                                            FinPara 
+                                            Si cont1 == 2 Entonces
+                                                Escribir c;
+                                            FinSi
+                                        FinPara	
+                                    <span>Proceso ejercicio3</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar27')" >Dada la siguiente matriz bidimensional, el cual debe de quemar en el código
+                    </button>
+                        <ul>
+                            <li>01 02 03 04 05</li>
+                            <li>06 07 08 09 10</li>
+                            <li>11 12 13 14 15</li>
+                            <li>16 17 18 19 20</li>
+                        </ul> 
+                        Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+                        <ul>
+                            <li>01 02 03 04 05</li>
+                            <li>10 09 08 07 06</li>
+                            <li>11 12 13 14 15</li>
+                            <li>20 19 18 17 16</li>
+                        </ul>    
+                        
+                        <li id="ocultar27" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio4</span>
+                                        Definir n, i,j, cont, n1, np Como Entero;
+                                        Dimension n[4,5]; Dimension n1[4,5];
+                                        cont <- 1;
+                                        Para i<-0 Hasta 3 Con Paso 1 Hacer
+                                            Escribir "";
+                                            Para j<-0 Hasta 4 Con Paso 1 Hacer
+                                                n[i,j] <- cont;
+                                                cont <- cont +1;
+                                                Escribir Sin Saltar  n[i,j], " ";
+                                            FinPara
+                                        FinPara
+                                        
+                                        Para i<-0 Hasta 3 Con Paso 1 Hacer
+                                            Escribir "";
+                                            np<-4;
+                                            Para j<-0 Hasta 4 Con Paso 1 Hacer
+                                                Si i==0 o i == 2 Entonces
+                                                    n1[i,j] <- n[i,j];
+                                                    Escribir  Sin Saltar n1[i,j], " ";
+                                                SiNo
+                                                    n1[i,j] <- n[i,np];
+                                                    np<-np-1;
+                                                    Escribir  Sin Saltar n1[i,j], " ";
+                                                FinSi
+                                            FinPara
+                                        FinPara
+                                    <span>Proceso ejercicio4</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <li><button type="button" class="bordesB" onclick="mostrar('ocultar28')" >Se debe de imprimir el siguiente cuadro
+                        El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar 
+                        previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</button>
+                        <img src="images/a5.PNG" alt="Figura" width="400px" height="150px" class="imagen"></button>
+                        <li id="ocultar28" class="ocultar"> 
+                            <pre class="marcas">
+                                <code class="marcas1">
+                                    <span>Proceso ejercicio5</span>
+                                        Definir c, i,j, t1, f1, f2 Como Entero;
+                                        Definir tablas, c1 Como Caracter;
+                                        Dimension tablas[11,11]; Dimension t1[11,11];
+                                        Escribir "Tablas de multiplicar";
+                                        Para i<-0 Hasta  10 Con Paso 1 Hacer
+                                            Escribir "";
+                                            Para j<-0 Hasta  10 Con Paso  1 Hacer
+                                                c1<- Concatenar(ConvertirATexto(j+1), "X");
+                                                tablas[i,j] <- Concatenar(c1,ConvertirATexto(i+1));
+                                                t1[i,j]<- (j+1)*(i+1);
+                                                Escribir  Sin Saltar tablas[i,j], " ";
+                                            FinPara
+                                        FinPara
+                                        Escribir "";
+                                        Escribir "Ingresa factor 1: ";
+                                        Leer f1;
+                                        Escribir "Ingresa factor 2: ";
+                                        Leer f2;
+                                        Escribir f1, "X", f2 , " = ", t1[f2-1,f1-1];
+                                    <span>Proceso ejercicio5</span> 
+                                </code>
+                            </pre>
+                        </li> 
+                    </li>
+                    <p>Si quieres ver la ejecución de cada ejercicio <a href="https://youtu.be/2uiqDG5OeHg">Ver video </a> </p>   
+                </ol>
+
+            </li>
+        </ol>
+    </div>
+    <footer>
+        <a href="index.html" class="footerN">Página principal</a>
+    </footer>
+</body>
+</html>
